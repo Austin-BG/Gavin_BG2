@@ -6,7 +6,7 @@ EET: summoning at the fate spirit will not give the Gavin that was left standing
 BACKUP ~gavin_bg2/backup~ 
 AUTHOR ~http://gibberlings3.net/forums/index.php?showforum=128~ //berelinde@gmail.com
 
-VERSION ~23~  //180628 packed by jastey
+VERSION ~23.1~  //180628 packed by jastey
 
 README ~gavin_bg2/readme-gavin_bg2.html~ 
 
@@ -153,6 +153,9 @@ LANGUAGE ~English~ ~english~ ~gavin_bg2/languages/english/setup-gavin_bg2.tra~
 ~gavin_bg2/languages/english/game-gavin_bg2.tra~ 
 ~gavin_bg2/languages/english/journal-gavin_bg2.tra~
 
+LANGUAGE ~Russian (by Kirian & Arcanecoast Team)~ ~russian~ ~gavin_bg2/languages/russian/setup-gavin_bg2.tra~ 
+~gavin_bg2/languages/russian/game-gavin_bg2.tra~ 
+~gavin_bg2/languages/russian/journal-gavin_bg2.tra~
 
 
 BEGIN @127 
