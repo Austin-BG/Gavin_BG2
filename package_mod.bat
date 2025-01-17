@@ -5,7 +5,7 @@ REM /* this initializes the values for the different variables referenced in com
 call "%~dp0..\ModPackaging\utilities\ie_games.bat"
 
 REM /* MODIFY: set the values of the 3 variables below to reflect the current mod version */
-set "mod_name=Gavin for BG2"
+set "mod_name=Gavin NPC for BG2, BGT, BG2EE, or EET"
 set mod_version=v23
 set mod_folder=gavin_bg2
 

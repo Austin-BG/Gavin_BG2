@@ -6,7 +6,7 @@
 
 ![The G3 Logo](https://raw.githubusercontent.com/Gibberlings3/.github/master/profile/g3_neutral.png)
 
-# Gavin NPC mod for BG2, BGT, BG2EE, or EET
+# Gavin NPC for BG2, BGT, BG2EE, or EET
 
 ## Overview
 
