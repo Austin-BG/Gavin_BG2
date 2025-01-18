@@ -50,7 +50,7 @@ ALWAYS
         ~0x80101FEF CD_STATE_NOTVALID~
       UNLESS ~CD_STATE_NOTVALID~ 
 
-      ACTION_IF !FILE_EXISTS_IN_GAME ~cdbehbla.pro~ THEN BEGIN //makes sure the fixpack isn't already installed
+      ACTION_IF !FILE_EXISTS_IN_GAME ~cdbehbla.pro~) THEN BEGIN //makes sure the fixpack isn't already installed
       
         INCLUDE ~gavin_bg2/lib/bg2fp.tpa~ // essentially eou romance fixes plus some other miscellany
         
@@ -386,6 +386,30 @@ COPY ~gavin_bg2/herbalist/itm/b!potbg4.itm~ ~override~
     
 COPY ~gavin_bg2/herbalist/sto/b!herb01.sto~ ~override~ 
   SAY NAME2 @178 
+  ADD_STORE_ITEM ~b!mortar~ #0 #0 #0 ~IDENTIFIED~ #1 
+  ADD_STORE_ITEM ~b!cassil~ #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!apple~  #0 #0 #0 ~IDENTIFIED~ #20 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!nutmeg~ #0 #0 #0 ~IDENTIFIED~ #5  ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!ginger~ #0 #0 #0 ~IDENTIFIED~ #5  ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!honey~  #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!spirit~ #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!bottle~ #0 #0 #0 ~IDENTIFIED~ #20 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!potn1~  #0 #0 #0 ~IDENTIFIED~ #2 
+  ADD_STORE_ITEM ~b!dkbery~ #0 #0 #0 ~IDENTIFIED~ #10 
+  ADD_STORE_ITEM ~b!felsul~ #0 #0 #0 ~IDENTIFIED~ #25 
+  ADD_STORE_ITEM ~b!ffoil~  #0 #0 #0 ~IDENTIFIED~ #2 
+  ADD_STORE_ITEM ~b!mule~   #0 #0 #0 ~IDENTIFIED~ #25 
+  ADD_STORE_ITEM ~b!silsap~ #0 #0 #0 ~IDENTIFIED~ #25 
+  ADD_STORE_ITEM ~b!potn2~  #0 #0 #0 ~IDENTIFIED~ #3 
+  ADD_STORE_ITEM ~b!brmold~ #0 #0 #0 ~IDENTIFIED~ #10 
+  ADD_STORE_ITEM ~b!algae~  #0 #0 #0 ~IDENTIFIED~ #10 
+  ADD_STORE_ITEM ~b!lime~   #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!whitl~  #0 #0 #0 ~IDENTIFIED~ #5 
+  ADD_STORE_ITEM ~b!cotblm~ #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!potn3~  #0 #0 #0 ~IDENTIFIED~ #3 
+  ADD_STORE_ITEM ~b!prkly~  #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!sens~   #0 #0 #0 ~IDENTIFIED~ #5 
+  ADD_STORE_ITEM ~b!potbag~ #0 #0 #0 ~IDENTIFIED~ #1 
 
 COPY_EXISTING ~shop01.cre~ ~override/b!herb01.cre~ 
   SAY NAME1 @193
@@ -395,6 +419,24 @@ COPY_EXISTING ~shop01.cre~ ~override/b!herb01.cre~
 
 COPY ~gavin_bg2/herbalist/sto/b!herb02.sto~ ~override~ 
   SAY NAME2 @199 
+  ADD_STORE_ITEM ~b!mortar~ #0 #0 #0 ~IDENTIFIED~ #1 
+  ADD_STORE_ITEM ~b!cassil~ #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!apple~  #0 #0 #0 ~IDENTIFIED~ #20 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!nutmeg~ #0 #0 #0 ~IDENTIFIED~ #5  ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!ginger~ #0 #0 #0 ~IDENTIFIED~ #5  ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!honey~  #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!spirit~ #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!bottle~ #0 #0 #0 ~IDENTIFIED~ #20 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!dkbery~ #0 #0 #0 ~IDENTIFIED~ #5 
+  ADD_STORE_ITEM ~b!felsul~ #0 #0 #0 ~IDENTIFIED~ #10 
+  ADD_STORE_ITEM ~b!mule~   #0 #0 #0 ~IDENTIFIED~ #10 
+  ADD_STORE_ITEM ~b!silsap~ #0 #0 #0 ~IDENTIFIED~ #5 
+  ADD_STORE_ITEM ~b!brmold~ #0 #0 #0 ~IDENTIFIED~ #2 
+  ADD_STORE_ITEM ~b!algae~  #0 #0 #0 ~IDENTIFIED~ #2 
+  ADD_STORE_ITEM ~b!lime~   #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!whitl~  #0 #0 #0 ~IDENTIFIED~ #5 
+  ADD_STORE_ITEM ~b!cotblm~ #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!prkly~  #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
 
 COPY ~gavin_bg2/herbalist/b!herb02.cre~ ~override/b!herb02.cre~ 
   SAY NAME1 @198
@@ -404,6 +446,30 @@ COPY ~gavin_bg2/herbalist/b!herb02.cre~ ~override/b!herb02.cre~
 
 COPY ~gavin_bg2/herbalist/sto/b!herb03.sto~ ~override~ 
   SAY NAME2 @201 
+  ADD_STORE_ITEM ~b!mortar~ #0 #0 #0 ~IDENTIFIED~ #1 
+  ADD_STORE_ITEM ~b!cassil~ #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!apple~  #0 #0 #0 ~IDENTIFIED~ #20 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!nutmeg~ #0 #0 #0 ~IDENTIFIED~ #5  ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!ginger~ #0 #0 #0 ~IDENTIFIED~ #5  ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!honey~  #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!spirit~ #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!bottle~ #0 #0 #0 ~IDENTIFIED~ #20 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!potn1~  #0 #0 #0 ~IDENTIFIED~ #2 
+  ADD_STORE_ITEM ~b!dkbery~ #0 #0 #0 ~IDENTIFIED~ #10 
+  ADD_STORE_ITEM ~b!felsul~ #0 #0 #0 ~IDENTIFIED~ #25 
+  ADD_STORE_ITEM ~b!ffoil~  #0 #0 #0 ~IDENTIFIED~ #2 
+  ADD_STORE_ITEM ~b!mule~   #0 #0 #0 ~IDENTIFIED~ #25 
+  ADD_STORE_ITEM ~b!silsap~ #0 #0 #0 ~IDENTIFIED~ #25 
+  ADD_STORE_ITEM ~b!potn2~  #0 #0 #0 ~IDENTIFIED~ #3 
+  ADD_STORE_ITEM ~b!brmold~ #0 #0 #0 ~IDENTIFIED~ #10 
+  ADD_STORE_ITEM ~b!algae~  #0 #0 #0 ~IDENTIFIED~ #10 
+  ADD_STORE_ITEM ~b!lime~   #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!whitl~  #0 #0 #0 ~IDENTIFIED~ #5 
+  ADD_STORE_ITEM ~b!cotblm~ #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!potn3~  #0 #0 #0 ~IDENTIFIED~ #3 
+  ADD_STORE_ITEM ~b!prkly~  #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!sens~   #0 #0 #0 ~IDENTIFIED~ #5 
+  ADD_STORE_ITEM ~b!potbg1~ #0 #0 #0 ~IDENTIFIED~ #1 
 
 COPY ~gavin_bg2/herbalist/b!herb02.cre~ ~override/b!herb03.cre~ 
   SAY NAME1 @200
@@ -413,6 +479,30 @@ COPY ~gavin_bg2/herbalist/b!herb02.cre~ ~override/b!herb03.cre~
 
 COPY ~gavin_bg2/herbalist/sto/b!herb04.sto~ ~override~ 
   SAY NAME2 @203 
+  ADD_STORE_ITEM ~b!mortar~ #0 #0 #0 ~IDENTIFIED~ #1 
+  ADD_STORE_ITEM ~b!cassil~ #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!apple~  #0 #0 #0 ~IDENTIFIED~ #20 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!nutmeg~ #0 #0 #0 ~IDENTIFIED~ #5  ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!ginger~ #0 #0 #0 ~IDENTIFIED~ #5  ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!honey~  #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!spirit~ #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!bottle~ #0 #0 #0 ~IDENTIFIED~ #20 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!potn1~  #0 #0 #0 ~IDENTIFIED~ #2 
+  ADD_STORE_ITEM ~b!dkbery~ #0 #0 #0 ~IDENTIFIED~ #10 
+  ADD_STORE_ITEM ~b!felsul~ #0 #0 #0 ~IDENTIFIED~ #25 
+  ADD_STORE_ITEM ~b!ffoil~  #0 #0 #0 ~IDENTIFIED~ #2 
+  ADD_STORE_ITEM ~b!mule~   #0 #0 #0 ~IDENTIFIED~ #25 
+  ADD_STORE_ITEM ~b!silsap~ #0 #0 #0 ~IDENTIFIED~ #25 
+  ADD_STORE_ITEM ~b!potn2~  #0 #0 #0 ~IDENTIFIED~ #3 
+  ADD_STORE_ITEM ~b!brmold~ #0 #0 #0 ~IDENTIFIED~ #10 
+  ADD_STORE_ITEM ~b!algae~  #0 #0 #0 ~IDENTIFIED~ #10 
+  ADD_STORE_ITEM ~b!lime~   #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!whitl~  #0 #0 #0 ~IDENTIFIED~ #5 
+  ADD_STORE_ITEM ~b!cotblm~ #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!potn3~  #0 #0 #0 ~IDENTIFIED~ #3 
+  ADD_STORE_ITEM ~b!prkly~  #0 #0 #0 ~IDENTIFIED~ #10 ~UNLIMITED~ 
+  ADD_STORE_ITEM ~b!sens~   #0 #0 #0 ~IDENTIFIED~ #5 
+  ADD_STORE_ITEM ~b!potbg2~ #0 #0 #0 ~IDENTIFIED~ #1 
 
 COPY ~gavin_bg2/herbalist/b!herb04.cre~ ~override/b!herb04.cre~ 
   SAY NAME1 @202
