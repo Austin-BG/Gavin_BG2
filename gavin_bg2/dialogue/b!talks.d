@@ -1057,7 +1057,9 @@ END
 
 IF ~~ t1eb10.0b1c 
 SAY @247 
-IF ~~ THEN + t1nb00.0c 
+IF ~~ THEN DO ~IncrementGlobal("B!GavLove","GLOBAL",-1)
+SetGlobal("B!GavRA","GLOBAL",3)
+SetGlobal("B!GavRomBreak","GLOBAL",1)~ + t1nb00.0c 
 END 
 
 IF ~~ t1eb10.0b1d 
