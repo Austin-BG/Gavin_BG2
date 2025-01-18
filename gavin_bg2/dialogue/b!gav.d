@@ -382,7 +382,7 @@ END
 
 IF ~~ b17 
 SAY @104 
-IF ~~ THEN DO ~DisplayStringHead(Myself,%I wonder... if I wait here long enough, will the priestess do that divination spell just to get rid of me?%) Wait(5)~ EXIT 
+IF ~~ THEN DO ~DisplayStringHead(Myself,@125) Wait(5)~ EXIT 
 END 
 
 IF ~~ b18 
