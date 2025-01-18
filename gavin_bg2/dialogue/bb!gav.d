@@ -1890,6 +1890,8 @@ Global("B!GavNal2","GLOBAL",2)
 CombatCounter(0)
 !See([ENEMY])
 See("B!Gavin2")
+!InParty("7XSKI") // skie from smiling imp
+!InParty("L#2SDSkie") // skie from lava
 ~ THEN BNALIA GavNal4
 @668 
 DO ~SetGlobal("B!GavNal2","GLOBAL",3)~
