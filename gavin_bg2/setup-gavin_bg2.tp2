@@ -50,7 +50,7 @@ ALWAYS
         ~0x80101FEF CD_STATE_NOTVALID~
       UNLESS ~CD_STATE_NOTVALID~ 
 
-      ACTION_IF !FILE_EXISTS_IN_GAME ~cdbehbla.pro~) THEN BEGIN //makes sure the fixpack isn't already installed
+      ACTION_IF !FILE_EXISTS_IN_GAME ~cdbehbla.pro~ THEN BEGIN //makes sure the fixpack isn't already installed
       
         INCLUDE ~gavin_bg2/lib/bg2fp.tpa~ // essentially eou romance fixes plus some other miscellany
         
@@ -441,8 +441,6 @@ COPY ~gavin_bg2/herbalist/sto/b!herb02.sto~ ~override~
 COPY ~gavin_bg2/herbalist/b!herb02.cre~ ~override/b!herb02.cre~ 
   SAY NAME1 @198
   SAY NAME2 @198
-  WRITE_ASCII 0x2cc ~b!herb02~ #8  // assign pre-joining dialogue file
-  WRITE_ASCII 0x280 ~b!herb02~ #32 // assign DV 
 
 COPY ~gavin_bg2/herbalist/sto/b!herb03.sto~ ~override~ 
   SAY NAME2 @201 
@@ -507,8 +505,6 @@ COPY ~gavin_bg2/herbalist/sto/b!herb04.sto~ ~override~
 COPY ~gavin_bg2/herbalist/b!herb04.cre~ ~override/b!herb04.cre~ 
   SAY NAME1 @202
   SAY NAME2 @202
-  WRITE_ASCII 0x2cc ~b!herb04~ #8  // assign pre-joining dialogue file
-  WRITE_ASCII 0x280 ~b!herb04~ #32 // assign DV 
 
 COPY ~gavin_bg2/herbalist/sto/b!herb01.sto~ ~override/b!herb05.sto~ 
   SAY NAME2 @205 
@@ -574,8 +570,6 @@ COPY ~gavin_bg2/herbalist/sto/b!herb03.sto~ ~override/b!herb06.sto~
 COPY ~gavin_bg2/herbalist/b!herb06.cre~ ~override/b!herb06.cre~ 
   SAY NAME1 @206
   SAY NAME2 @206
-  WRITE_ASCII 0x2cc ~b!herb06~ #8  // assign pre-joining dialogue file
-  WRITE_ASCII 0x280 ~b!herb06~ #32 // assign DV 
 
 COPY ~gavin_bg2/herbalist/sto/b!herb04.sto~ ~override/b!herb07.sto~ 
   SAY NAME2 @209 
@@ -612,9 +606,6 @@ COPY ~gavin_bg2/herbalist/b!herb02.cre~ ~override/b!herb07.cre~
 COPY ~gavin_bg2/herbalist/b!mortar.cre~ ~override~
   SAY NAME1 @128
   SAY NAME2 @128
-  WRITE_ASCII 0x248 ~b!mortar~   #8  // assign override script
-  WRITE_ASCII 0x2cc ~b!mortar~    #8  // assign pre-joining dialogue file
-  WRITE_ASCII 0x280 ~b!mortar~ #32 // assign DV 
  
 COMPILE EVALUATED_BUFFER      ~gavin_bg2/herbalist/b!herbalist.d~ 
 COMPILE       ~gavin_bg2/herbalist/b!mortrd.d~ 
@@ -628,8 +619,6 @@ EXTEND_TOP    ~ar0700.bcs~ ~gavin_bg2/herbalist/b!ar0700.baf~
 COPY ~gavin_bg2/items/gifts/b!gift.cre~ ~override~ 
   SAY NAME1 @300
   SAY NAME2 @300
-  WRITE_ASCII 0x2cc ~b!gift~ #8  // assign pre-joining dialogue file
-  WRITE_ASCII 0x280 ~b!gift~ #32 // assign DV 
   
 COPY ~gavin_bg2/items/gifts/b!aegf.itm~ ~override~ 
     SAY NAME1 @301 
