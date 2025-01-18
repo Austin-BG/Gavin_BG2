@@ -1747,8 +1747,8 @@ SAY @361
 + ~!Global("B!GavSex","GLOBAL",1) 
       OR(2) Global("B!GavRA","GLOBAL",3) 
             Global("B!GavRA","GLOBAL",0)~ + @365 + t2.15b 
-+ ~Global("B!GavNoBG1","GLOBAL",1)~ + @366 + t2.2
-+ ~!Global("B!GavNoBG1","GLOBAL",1)~ + @366 + t2.2a
++ ~!Global("B!GavNoBG1","GLOBAL",1)~ + @366 + t2.2
++ ~Global("B!GavNoBG1","GLOBAL",1)~ + @366 + t2.2a
 ++ @367 + t2.16 
 + ~Global("B!GavNoBG1","GLOBAL",1)~ + @368 + t2.17 
 + ~!Global("B!GavNoBG1","GLOBAL",1)~ + @368 + t2.17a 
