@@ -207,16 +207,16 @@ IF ~Global("B!GavToBLT","GLOBAL",4)~ THEN BEGIN T2
 SAY @63 
 = @64 
 = @65 
-+ ~!GlobalGT("B!GavSex","GLOBAL",0)~ + @66 DO ~SetGlobal("B!GavToBLT","GLOBAL",5) RealSetGlobalTimer("B!GavToBTime","GLOBAL",GAV_TIME)~ + T2.2 
-+ ~GlobalGT("B!GavSex","GLOBAL",0)~ + @67 DO ~SetGlobal("B!GavToBLT","GLOBAL",5) RealSetGlobalTimer("B!GavToBTime","GLOBAL",GAV_TIME)~ + T2.3  
-+ ~Global("B!GavFirstTime","LOCALS",1) !GlobalGT("B!GavSex","GLOBAL",0)~ + @68 DO ~SetGlobal("B!GavToBLT","GLOBAL",5) RealSetGlobalTimer("B!GavToBTime","GLOBAL",GAV_TIME)~ + T2.4 
-+ ~!GlobalGT("B!GavSex","GLOBAL",0)~ + @69 DO ~SetGlobal("B!GavToBLT","GLOBAL",5) RealSetGlobalTimer("B!GavToBTime","GLOBAL",GAV_TIME)~ + T2.5 
-+ ~GlobalGT("B!GavSex","GLOBAL",0)~ + @70 DO ~SetGlobal("B!GavToBLT","GLOBAL",5) RealSetGlobalTimer("B!GavToBTime","GLOBAL",GAV_TIME)~ + T2.6 
-+ ~Global("B!GavFirstTime","LOCALS",1) !GlobalGT("B!GavSex","GLOBAL",0)~ + @71 DO ~SetGlobal("B!GavToBLT","GLOBAL",5) RealSetGlobalTimer("B!GavToBTime","GLOBAL",GAV_TIME)~ + T2.7 
-+ ~!GlobalGT("B!GavSex","GLOBAL",0)~ + @72 DO ~SetGlobal("B!GavToBLT","GLOBAL",5) RealSetGlobalTimer("B!GavToBTime","GLOBAL",GAV_TIME)~ + T2.8 
-+ ~GlobalGT("B!GavSex","GLOBAL",0)~ + @73 DO ~SetGlobal("B!GavToBLT","GLOBAL",5) RealSetGlobalTimer("B!GavToBTime","GLOBAL",GAV_TIME)~ + T2.1 
-+ ~!GlobalGT("B!GavSex","GLOBAL",0)~ + @74 DO ~SetGlobal("B!GavToBLT","GLOBAL",5) RealSetGlobalTimer("B!GavToBTime","GLOBAL",GAV_TIME)~ + T2.9 
-+ ~GlobalGT("B!GavSex","GLOBAL",0)~ + @75 DO ~SetGlobal("B!GavToBLT","GLOBAL",5) RealSetGlobalTimer("B!GavToBTime","GLOBAL",GAV_TIME)~ + T2.9 
++ ~!GlobalGT("B!GavSex","GLOBAL",0)~ + @66 DO ~SetGlobal("B!GavToBLT","GLOBAL",5) RealSetGlobalTimer("B!GavToBTime","GLOBAL","%GAV_TIME%")~ + T2.2 
++ ~GlobalGT("B!GavSex","GLOBAL",0)~ + @67 DO ~SetGlobal("B!GavToBLT","GLOBAL",5) RealSetGlobalTimer("B!GavToBTime","GLOBAL","%GAV_TIME%")~ + T2.3  
++ ~Global("B!GavFirstTime","LOCALS",1) !GlobalGT("B!GavSex","GLOBAL",0)~ + @68 DO ~SetGlobal("B!GavToBLT","GLOBAL",5) RealSetGlobalTimer("B!GavToBTime","GLOBAL","%GAV_TIME%")~ + T2.4 
++ ~!GlobalGT("B!GavSex","GLOBAL",0)~ + @69 DO ~SetGlobal("B!GavToBLT","GLOBAL",5) RealSetGlobalTimer("B!GavToBTime","GLOBAL","%GAV_TIME%")~ + T2.5 
++ ~GlobalGT("B!GavSex","GLOBAL",0)~ + @70 DO ~SetGlobal("B!GavToBLT","GLOBAL",5) RealSetGlobalTimer("B!GavToBTime","GLOBAL","%GAV_TIME%")~ + T2.6 
++ ~Global("B!GavFirstTime","LOCALS",1) !GlobalGT("B!GavSex","GLOBAL",0)~ + @71 DO ~SetGlobal("B!GavToBLT","GLOBAL",5) RealSetGlobalTimer("B!GavToBTime","GLOBAL","%GAV_TIME%")~ + T2.7 
++ ~!GlobalGT("B!GavSex","GLOBAL",0)~ + @72 DO ~SetGlobal("B!GavToBLT","GLOBAL",5) RealSetGlobalTimer("B!GavToBTime","GLOBAL","%GAV_TIME%")~ + T2.8 
++ ~GlobalGT("B!GavSex","GLOBAL",0)~ + @73 DO ~SetGlobal("B!GavToBLT","GLOBAL",5) RealSetGlobalTimer("B!GavToBTime","GLOBAL","%GAV_TIME%")~ + T2.1 
++ ~!GlobalGT("B!GavSex","GLOBAL",0)~ + @74 DO ~SetGlobal("B!GavToBLT","GLOBAL",5) RealSetGlobalTimer("B!GavToBTime","GLOBAL","%GAV_TIME%")~ + T2.9 
++ ~GlobalGT("B!GavSex","GLOBAL",0)~ + @75 DO ~SetGlobal("B!GavToBLT","GLOBAL",5) RealSetGlobalTimer("B!GavToBTime","GLOBAL","%GAV_TIME%")~ + T2.9 
 END 
 
 IF ~~ T2.1 

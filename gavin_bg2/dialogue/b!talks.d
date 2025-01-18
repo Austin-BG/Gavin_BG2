@@ -25,7 +25,7 @@
 CHAIN 
 IF ~Global("B!GavTalk","GLOBAL",2) !Global("B!GavNoBG1","GLOBAL",1)~ THEN ~B!GAVJ~ bf1.1a
 @0 
-DO ~ SetGlobal("B!GavTalk","GLOBAL",3) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~
+DO ~ SetGlobal("B!GavTalk","GLOBAL",3) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~
 END
 ++ @1 EXTERN ~B!GAVJ~ bf1.2
 ++ @2 EXTERN ~B!GAVJ~ bf1.3
@@ -38,7 +38,7 @@ END
 CHAIN 
 IF ~Global("B!GavTalk","GLOBAL",2) Global("B!GavNoBG1","GLOBAL",1)~ THEN ~B!GAVJ~ bf1.1b
 @8
-DO ~ SetGlobal("B!GavTalk","GLOBAL",3) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~
+DO ~ SetGlobal("B!GavTalk","GLOBAL",3) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~
 END
 ++ @1 EXTERN ~B!GAVJ~ bf1.2
 ++ @9 EXTERN ~B!GAVJ~ bf1.3a
@@ -1677,7 +1677,7 @@ END
 CHAIN
 IF ~Global("B!GavTalk","GLOBAL",4)~ THEN ~B!GAVJ~ t2.1
 @332 
-DO ~SetGlobal("B!GavTalk","GLOBAL",5) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~
+DO ~SetGlobal("B!GavTalk","GLOBAL",5) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~
 END
 + ~GlobalLT("Chapter","GLOBAL",%bg2_chapter_6%) 
       !Global("B!GavNoBG1","GLOBAL",1)~ + @333 DO ~SetGlobal("B!GavBhaal","GLOBAL",1)~ EXTERN ~B!GAVJ~ t2.2
@@ -2081,7 +2081,7 @@ END
 CHAIN
 IF ~Global("B!GavTalk","GLOBAL",6)~ THEN ~B!GAVJ~ t3.1
 @434 
-DO ~SetGlobal("B!GavTalk","GLOBAL",7) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~
+DO ~SetGlobal("B!GavTalk","GLOBAL",7) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~
 END
 ++ @435 EXTERN ~B!GavJ~ t3.2 
 + ~Race(Player1,HUMAN) 
@@ -3087,7 +3087,7 @@ END
 CHAIN
 IF ~Global("B!GavTalk","GLOBAL",8)~ THEN ~B!GAVJ~ t4.1
 @705 
-DO ~SetGlobal("B!GavTalk","GLOBAL",9) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~
+DO ~SetGlobal("B!GavTalk","GLOBAL",9) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~
 END
 ++ @706 EXTERN ~B!GavJ~ t4.2 
 ++ @707 DO ~SetGlobal("B!GavReligion","LOCALS",1)~ EXTERN ~B!GavJ~ t4.3 
@@ -3604,7 +3604,7 @@ END
 CHAIN
 IF ~Global("B!GavTalk","GLOBAL",10)~ THEN ~B!GAVJ~ t5.1
 @912 
-DO ~SetGlobal("B!GavTalk","GLOBAL",11) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~
+DO ~SetGlobal("B!GavTalk","GLOBAL",11) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~
 END
 ++ @913 EXTERN ~B!GavJ~ t5.2 
 ++ @914 EXTERN ~B!GavJ~ t5.3 
@@ -3733,7 +3733,7 @@ END
 CHAIN
 IF ~Global("B!GavTalk","GLOBAL",12)~ THEN ~B!GAVJ~ t6.1
 @964 
-DO ~SetGlobal("B!GavTalk","GLOBAL",13) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~
+DO ~SetGlobal("B!GavTalk","GLOBAL",13) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~
 END
 + ~Gender(Player1,MALE)~ + @965 EXTERN ~B!GavJ~ t6.2 
 + ~Gender(Player1,FEMALE) !Global("B!GavRA","GLOBAL",2) !Global("B!GavRA","GLOBAL",4)~ + @965 EXTERN ~B!GavJ~ t6.3a 
@@ -4157,7 +4157,7 @@ END
 CHAIN
 IF ~Global("B!GavTalk","GLOBAL",14)~ THEN ~B!GAVJ~ t7.1
 @1069 
-DO ~SetGlobal("B!GavTalk","GLOBAL",15) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~
+DO ~SetGlobal("B!GavTalk","GLOBAL",15) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~
 END
 ++ @1070 EXTERN ~B!GavJ~ t7.2 
 ++ @1071 EXTERN ~B!GavJ~ t7.3 
@@ -4298,7 +4298,7 @@ END
 CHAIN
 IF ~Global("B!GavTalk","GLOBAL",16)~ THEN ~B!GAVJ~ t8.0
 @1108 
-DO ~SetGlobal("B!GavTalk","GLOBAL",17) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~
+DO ~SetGlobal("B!GavTalk","GLOBAL",17) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~
 END
 + ~Global("B!GavBhaal","GLOBAL",1)~ + @1109 EXTERN ~B!GavJ~ t8.1 
 + ~!Global("B!GavBhaal","GLOBAL",1)~ + @1109 EXTERN ~B!GavJ~ t8.2 
@@ -4539,7 +4539,7 @@ END
 CHAIN
 IF ~Global("B!GavTalk","GLOBAL",18)~ THEN ~B!GAVJ~ t9.0
 @1169 
-DO ~SetGlobal("B!GavTalk","GLOBAL",19) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~
+DO ~SetGlobal("B!GavTalk","GLOBAL",19) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~
 END
 ++ @1170 EXTERN ~B!GavJ~ t9.1 
 + ~Gender(Player1,MALE)~ + @1171 EXTERN ~B!GavJ~ t9.2 
@@ -4684,7 +4684,7 @@ END
 CHAIN
 IF ~Global("B!GavTalk","GLOBAL",20)~ THEN ~B!GAVJ~ t10.0
 @1212 
-DO ~SetGlobal("B!GavTalk","GLOBAL",21) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~
+DO ~SetGlobal("B!GavTalk","GLOBAL",21) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~
 END
 ++ @1213 EXTERN ~B!GavJ~ t10.1 
 + ~Alignment(Player1,MASK_EVIL)~ + @1214 DO ~IncrementGlobal("B!GavLove","GLOBAL",1) 
@@ -4876,11 +4876,11 @@ APPEND ~B!GavJ~
 
 IF ~Global("B!GavTalk","GLOBAL",22)~ THEN BEGIN t11.1
 SAY @1264 
-++ @1265 DO ~SetGlobal("B!GavTalk","GLOBAL",23) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~ + t11.mighty 
-+ ~!Global("B!GavRA","GLOBAL",0)~ + @1266 DO ~SetGlobal("B!GavTalk","GLOBAL",23) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~ + t11.mighty 
-++ @1267 DO ~SetGlobal("B!GavTalk","GLOBAL",23) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~ + t11.mighty 
-++ @1268 DO ~SetGlobal("B!GavTalk","GLOBAL",23) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~ + t11.mighty 
-++ @1269 DO ~SetGlobal("B!GavTalk","GLOBAL",23) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~ + t11.hardly 
+++ @1265 DO ~SetGlobal("B!GavTalk","GLOBAL",23) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~ + t11.mighty 
++ ~!Global("B!GavRA","GLOBAL",0)~ + @1266 DO ~SetGlobal("B!GavTalk","GLOBAL",23) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~ + t11.mighty 
+++ @1267 DO ~SetGlobal("B!GavTalk","GLOBAL",23) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~ + t11.mighty 
+++ @1268 DO ~SetGlobal("B!GavTalk","GLOBAL",23) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~ + t11.mighty 
+++ @1269 DO ~SetGlobal("B!GavTalk","GLOBAL",23) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~ + t11.hardly 
 END 
 
 IF ~~ THEN t11.hardly 
@@ -5227,7 +5227,7 @@ APPEND ~B!GavJ~
 
 IF ~Global("B!GavTalk","GLOBAL",24)~ THEN BEGIN t12.0 
 SAY @1360 
-++ @1361 DO ~SetGlobal("B!GavTalk","GLOBAL",25) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~ + t12.quests 
+++ @1361 DO ~SetGlobal("B!GavTalk","GLOBAL",25) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~ + t12.quests 
 + ~OR(27) 
     AreaCheck("AR0085") 
     AreaCheck("AR1100") 
@@ -5255,7 +5255,7 @@ SAY @1360
     AreaCheck("AR2602") 
     AreaCheck("AR2603")
     AreaCheck("AR2700") 
-    AreaCheck("AR2800")~ + @1362 DO ~SetGlobal("B!GavTalk","GLOBAL",25) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~ + t12.quests 
+    AreaCheck("AR2800")~ + @1362 DO ~SetGlobal("B!GavTalk","GLOBAL",25) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~ + t12.quests 
 + ~!AreaCheck("AR0085") 
     !AreaCheck("AR1100") 
     !AreaCheck("AR1101") 
@@ -5282,8 +5282,8 @@ SAY @1360
     !AreaCheck("AR2602") 
     !AreaCheck("AR2603")
     !AreaCheck("AR2700") 
-    !AreaCheck("AR2800")~ + @1363 DO ~SetGlobal("B!GavTalk","GLOBAL",25) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~ + t12.quests 
-++ @1364 DO ~SetGlobal("B!GavTalk","GLOBAL",25) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~ + t12.quests 
+    !AreaCheck("AR2800")~ + @1363 DO ~SetGlobal("B!GavTalk","GLOBAL",25) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~ + t12.quests 
+++ @1364 DO ~SetGlobal("B!GavTalk","GLOBAL",25) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~ + t12.quests 
 END 
 
 IF ~~ t12.quests 
@@ -5482,7 +5482,7 @@ END
 CHAIN
 IF ~Global("B!GavTalk","GLOBAL",26)~ THEN ~B!GAVJ~ t13.0
 @1415 
-DO ~SetGlobal("B!GavTalk","GLOBAL",27) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~
+DO ~SetGlobal("B!GavTalk","GLOBAL",27) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~
 END
 ++ @1416 EXTERN ~B!GAVJ~ t13.1
 ++ @1417  EXTERN ~B!GAVJ~ t13.2
@@ -6065,11 +6065,11 @@ APPEND ~B!GavJ~
 
 IF ~Global("B!GavTalk","GLOBAL",28)~ THEN BEGIN t14.1
 SAY @1615 
-++ @1616 DO ~SetGlobal("B!GavTalk","GLOBAL",29) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~ + t14.tired 
-++ @1617 DO ~SetGlobal("B!GavTalk","GLOBAL",29) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~ + t14.hungry 
-++ @1618 DO ~SetGlobal("B!GavTalk","GLOBAL",29) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~ + t14.warm 
-++ @1619 DO ~SetGlobal("B!GavTalk","GLOBAL",29) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~ + t14.headache 
-++ @1620 DO ~SetGlobal("B!GavTalk","GLOBAL",29) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~ + t14.else 
+++ @1616 DO ~SetGlobal("B!GavTalk","GLOBAL",29) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~ + t14.tired 
+++ @1617 DO ~SetGlobal("B!GavTalk","GLOBAL",29) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~ + t14.hungry 
+++ @1618 DO ~SetGlobal("B!GavTalk","GLOBAL",29) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~ + t14.warm 
+++ @1619 DO ~SetGlobal("B!GavTalk","GLOBAL",29) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~ + t14.headache 
+++ @1620 DO ~SetGlobal("B!GavTalk","GLOBAL",29) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~ + t14.else 
 END 
 
 IF ~~ t14.tired 
@@ -8249,7 +8249,7 @@ END
 CHAIN
 IF ~Global("B!GavTalk","GLOBAL",30)~ THEN ~B!GAVJ~ t15.1
 @2299 
-DO ~SetGlobal("B!GavTalk","GLOBAL",31) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~
+DO ~SetGlobal("B!GavTalk","GLOBAL",31) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~
 END
 + ~GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%)~ + @2300 EXTERN ~B!GavJ~ t15.2 
 ++ @2301 EXTERN ~B!GavJ~ t15.3 
@@ -8615,7 +8615,7 @@ END
 CHAIN
 IF ~Global("B!GavTalk","GLOBAL",32)~ THEN ~B!GAVJ~ t16.1
 @2383 
-DO ~SetGlobal("B!GavTalk","GLOBAL",33) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~
+DO ~SetGlobal("B!GavTalk","GLOBAL",33) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~
 END
 ++ @2384 EXTERN ~B!GavJ~ t16.2 
 + ~!Global("B!GavRA","GLOBAL",2)~ + @2385 EXTERN ~B!GavJ~ t16.3 
@@ -8823,7 +8823,7 @@ IF ~Global("B!GavSerious","GLOBAL",2)~ THEN ~B!GAVJ~ st.1
 = @2432 
 = @2433 
 = @2434
-DO ~SetGlobal("B!GavSerious","GLOBAL",3) RealSetGlobalTimer("B!GavT","GLOBAL",GAV_TIME)~
+DO ~SetGlobal("B!GavSerious","GLOBAL",3) RealSetGlobalTimer("B!GavT","GLOBAL","%GAV_TIME%")~
 END
 ++ @2435 EXTERN ~B!GavJ~ st.2 
 ++ @2436 EXTERN ~B!GavJ~ st.2 
