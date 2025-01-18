@@ -3,6 +3,7 @@ IF
   Global("NiceSounds","LOCALS",0)
 THEN
   RESPONSE #100
+    SetPlayerSound(Myself,70844,SELECT_COMMON1) //  I am ready to act.
     SetPlayerSound(Myself,70845,SELECT_COMMON4) //  Yes?
     SetPlayerSound(Myself,70846,SELECT_ACTION1) //  Of course.
     SetPlayerSound(Myself,70847,SELECT_ACTION3) //  Not a problem.

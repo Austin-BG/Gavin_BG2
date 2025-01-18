@@ -1,0 +1,45 @@
+// copied and pasted from bg2fixpack
+
+// first three blocks are essentially modernized EoU romance fixes
+COPY_EXISTING ~anomen.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY ~\(SetGlobal("AnomenIsNotKnight","GLOBAL",1)\)~ ~\1 ChangeAlignment("Anomen",CHAOTIC_NEUTRAL)~
+    REPLACE_TEXTUALLY ~"TALKEDTOCOR","GLOBAL"~ ~"TALKEDCOR","GLOBAL"~
+    APPEND_FILE ~gavin_bg2/lib/anomen.baf~ // was extend_top'd, but no reason to
+  END
+
+COPY_EXISTING ~jaheira.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY ~IncrementGlobal("LoveTalk","LOCALS",1)[ %TAB%%LNL%%MNL%%WNL%]+\(SetGlobal("DerminSpawn","GLOBAL",5)[ %TAB%%LNL%%MNL%%WNL%]+SetGlobalTimer("DerminAppear","GLOBAL",\)TWO_DAYS)~
+      ~\117280)~ // purge increment global, change timer length
+    REPLACE_TEXTUALLY ~[ %TAB%]SetGlobalTimer("TerminselAppear","GLOBAL",FIVE_DAYS)~
+                      ~ RealSetGlobalTimer("TerminselAppear","GLOBAL",3600)~ // originally 36000 seems to be more than random.
+  END
+  
+COPY_EXISTING ~viconia.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY ~Global("LoveTalk","LOCALS",71)~ ~False()~ // not a regular scheduled talk; only after handmaiden/yochlol encounter
+  END
+
+// alter missing areatype check to match banter trigger
+COPY_EXISTING ~aerie.bcs~   ~override~
+              ~anomen.bcs~  ~override~
+              ~minsc.bcs~   ~override~
+              ~nalia.bcs~   ~override~
+              ~yoshimo.bcs~ ~override~
+ DECOMPILE_AND_PATCH BEGIN
+   REPLACE_TEXTUALLY ~AreaType(0)~ ~AreaType(OUTDOOR)~ // for Minsc Umar Hills reminder, Nalia-Edwina banter
+ END
+ BUT_ONLY
+ 
+ACTION_IF FILE_EXISTS_IN_GAME ~mel01.cre~ THEN BEGIN
+
+  COPY_EXISTING ~interdia.2da~ ~override~
+    SET_2DA_ENTRY 17 1 2 ~BIMOEN2~ // fixes ToB version
+    BUT_ONLY
+
+END ELSE BEGIN
+
+  APPEND ~interdia.2da~ ~IMOEN       BIMOEN2~ UNLESS ~[ %TAB%]BIMOEN2[ %TAB%%LNL%%MNL%%WNL%]~ // fixes SoA version
+
+END

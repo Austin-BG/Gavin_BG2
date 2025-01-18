@@ -3,12 +3,12 @@ EET: summoning at the fate spirit will not give the Gavin that was left standing
 
 
 
-BACKUP ~gavin_bg2/backup~ 
-AUTHOR ~http://gibberlings3.net/forums/index.php?showforum=128~ //berelinde@gmail.com
+BACKUP ~weidu_external/gavin_bg2/backup~ 
+SUPPORT ~https://www.gibberlings3.net/forums/forum/128-gavin/~ //berelinde@gmail.com
 
 VERSION ~23.1~  //180628 packed by jastey
 
-README ~gavin_bg2/readme-gavin_bg2.html~ 
+README ~gavin_bg2/readme-gavin_bg2-%LANGUAGE%.html~  ~gavin_bg2/readme-gavin_bg2.html~ 
 
 // setup-gavin_bg2.tp2
 
@@ -16,112 +16,47 @@ README ~gavin_bg2/readme-gavin_bg2.html~
 /* prep tras for sound references */
 
 
-AUTO_TRA ~gavin_bg2/languages/%s~
 
 ALWAYS
+  
+  ACTION_IF !VARIABLE_IS_SET cd_gavin_bg2_always THEN BEGIN // check to make this happen only once per install 
+      
+    OUTER_SET cd_gavin_bg2_always = 1
 
-  ACTION_IF GAME_IS ~eet~ BEGIN
-    OUTER_SET bg2_chapter = 12
-  END ELSE BEGIN
-    OUTER_SET bg2_chapter = 0
-  END
-  OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
-    OUTER_SET bg2_chapter = bg2_chapter + 1
-    OUTER_SPRINT name_source ~bg2_chapter_%i%~
-    OUTER_SET EVAL ~%name_source%~ = bg2_chapter
-  END
+    ACTION_IF GAME_IS ~eet~ BEGIN
+      OUTER_SET bg2_chapter = 12
+    END ELSE BEGIN
+      OUTER_SET bg2_chapter = 0
+    END
+    OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+      OUTER_SET bg2_chapter = bg2_chapter + 1
+      OUTER_SPRINT name_source ~bg2_chapter_%i%~
+      OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+    END
 
 
 
 ///////////////////////////////////////////
 /* all following actions are only processed ONCE for the whole mod, independent of un- and reinstalling of single components */
 
-  ACTION_IF !FILE_EXISTS ~gavin_bg2/backup/gavinbg2reinstall.mrk~ BEGIN
-
 
     APPEND ~STATE.IDS~
       ~0x80101FEF CD_STATE_NOTVALID~
     UNLESS ~CD_STATE_NOTVALID~ 
 
-    ACTION_IF (GAME_IS ~bgt tob bg2~ AND NOT FILE_EXISTS_IN_GAME ~cdbehbla.pro~) //makes sure the fixpack isn't already installed
-
-    THEN BEGIN
-
-      COPY_EXISTING ~aerie.BCS~ ~override~
-      DECOMPILE_BCS_TO_BAF
-      REPLACE_TEXTUALLY ~AreaType(0)~ ~AreaType(OUTDOOR)~
-      COMPILE_BAF_TO_BCS
-      BUT_ONLY_IF_IT_CHANGES
-
-
-      COPY_EXISTING ~anomen.BCS~ ~override~
-      DECOMPILE_BCS_TO_BAF
-      REPLACE_TEXTUALLY ~SetGlobal("AnomenIsNotKnight","GLOBAL",1)~
-      ~SetGlobal("AnomenIsNotKnight","GLOBAL",1)
-      ChangeAlignment("Anomen",CHAOTIC_NEUTRAL)~
-      REPLACE_TEXTUALLY ~"TALKEDTOCOR","GLOBAL"~ ~"TALKEDCOR","GLOBAL"~
-      COMPILE_BAF_TO_BCS 
-      BUT_ONLY_IF_IT_CHANGES
-
-      EXTEND_TOP ~anomen.bcs~ ~gavin_bg2/lib/anomen.baf~
-
-      COPY_EXISTING ~jaheira.BCS~ ~override~
-      DECOMPILE_BCS_TO_BAF
-      REPLACE_TEXTUALLY ~GlobalLT("DerminSpawn","GLOBAL",5)~
-      ~  GlobalLT("DerminSpawn","GLOBAL",5)
-        !InParty(Myself)
-      THEN
-        RESPONSE #100
-          RealSetGlobalTimer("JaheiraRomance","GLOBAL",3600)
-          SetGlobal("DerminSpawn","GLOBAL",5)
-          SetGlobalTimer("DerminAppear","GLOBAL",17280)
-          StartDialogueNoSet([PC])
-      END
-
-      IF
-        False()~
-      REPLACE_TEXTUALLY ~\bSetGlobalTimer("TerminselAppear","GLOBAL",FIVE_DAYS)~
-                      ~RealSetGlobalTimer("TerminselAppear","GLOBAL",3600)~ // originally 36000 seems to be more than random.
-      COMPILE_BAF_TO_BCS 
-      BUT_ONLY_IF_IT_CHANGES
-
-
-      COPY_EXISTING ~viconia.BCS~ ~override~
-      DECOMPILE_BCS_TO_BAF
-      REPLACE_TEXTUALLY ~Global("LoveTalk","LOCALS",71)~ ~False()~
-      COMPILE_BAF_TO_BCS
-      BUT_ONLY_IF_IT_CHANGES
-
-
-// alter missing areatype check to match banter trigger
-      COPY_EXISTING ~aerie.bcs~   ~override~
-              ~anomen.bcs~  ~override~
-              ~minsc.bcs~   ~override~
-              ~nalia.bcs~   ~override~
-              ~yoshimo.bcs~ ~override~
-      DECOMPILE_BCS_TO_BAF
-      REPLACE_TEXTUALLY ~AreaType(0)~ ~AreaType(OUTDOOR)~ // for Minsc Umar Hills reminder, Nalia-Edwina banter
-      COMPILE_BAF_TO_BCS
-      BUT_ONLY_IF_IT_CHANGES
-
-
-
-      ACTION_IF FILE_EXISTS_IN_GAME ~saradush.mve~ THEN BEGIN
-        COPY_EXISTING ~interdia.2da~ ~override~
-        SET_2DA_ENTRY 17 1 2 ~BIMOEN2~ // fixes ToB version
-        BUT_ONLY_IF_IT_CHANGES
-      END ELSE BEGIN
-        APPEND ~interdia.2da~ ~IMOEN       BIMOEN2~ // fixes SoA version
-        UNLESS ~BIMOEN2~
-      END
-    END
+    ACTION_IF (GAME_IS ~bgt tob bg2~ AND NOT FILE_EXISTS_IN_GAME ~cdbehbla.pro~) THEN BEGIN //makes sure the fixpack isn't already installed
+    
+      INCLUDE ~gavin_bg2/lib/bg2fp.tpa~ // essentially eou romance fixes plus some other miscellany
+      
+    END        
 
     ACTION_IF NOT FILE_EXISTS_IN_GAME ~bimoen2.dlg~ THEN BEGIN
       COMPILE ~gavin_bg2/lib/b!bimoen2.d~
     END
 
     ACTION_IF GAME_IS ~bgt bg2 tob~ THEN BEGIN
-      INCLUDE ~gavin_bg2/lib/b!ids.tph~
+      INCLUDE ~gavin_bg2/lib/tob2soa.tph~
+      INCLUDE ~gavin_bg2/lib/kit_ids_fixer.tpa~
       INCLUDE ~gavin_bg2/lib/b!times.tph~
     END
 
@@ -148,6 +83,8 @@ journal-gavin_bg2.tra END
  END //ACTION_IF !FILE_EXISTS gavinbg2reinstall.mrk
 
 END //ALWAYS
+
+AUTO_TRA ~gavin_bg2/languages/%s~
 
 LANGUAGE ~English~ ~english~ ~gavin_bg2/languages/english/setup-gavin_bg2.tra~ 
 ~gavin_bg2/languages/english/game-gavin_bg2.tra~ 
