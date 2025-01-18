@@ -162,8 +162,13 @@ SAY @65
 = @66
 = @67
 = @68
-= @69
-IF ~~ THEN + bf1.13 //link to @73
+IF ~Global("B!GavNoBG1","GLOBAL",1)~ THEN + bf1.13 //link to @73
+IF ~!Global("B!GavNoBG1","GLOBAL",1)~ THEN + bf1.10a //link to @73
+END
+
+IF ~~ bf1.10a
+SAY @69
+IF ~~ THEN + bf1.13
 END
 
 IF ~~ bf1.11
