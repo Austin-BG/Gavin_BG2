@@ -99,7 +99,7 @@ BEGIN @127
 
 /* Setup for BGT compatibility */ 
 
-ACTION_IF FILE_EXISTS_IN_GAME ~b!gavin.cre~ THEN BEGIN 
+ACTION_IF FILE_EXISTS_IN_GAME ~b!gavin.cre~ THEN BEGIN // bg gavin mod
     EXTEND_TOP ~ar0602.bcs~ ~gavin_bg2/script/b!getting_rid_of_gavin.baf~ 
 END 
 
@@ -158,9 +158,6 @@ COPY ~gavin_bg2/items/b!gavbod.itm~ ~override~
     SAY NAME2 @172 
     SAY UNIDENTIFIED_DESC @173 
     SAY DESC @173 
-    WRITE_ASCII 0x3a ~ib!gavbd~   #8  //inventory icon 
-    WRITE_ASCII 0x44 ~gsack01~   #8  //ground icon
-    WRITE_ASCII 0x58 ~cmiscbm~   #8  //carried icon 
     
 COPY ~gavin_bg2/items/b!vouch.itm~ ~override~ 
     SAY NAME1 @180 
@@ -208,171 +205,138 @@ COPY ~gavin_bg2/herbalist/itm/b!mortar.itm~ ~override~
     SAY NAME2 @128 
     SAY UNIDENTIFIED_DESC @129 
     SAY DESC @129 
-    WRITE_ASCII 0x3a ~ib!mort~     #8  //inventory icon 
-    WRITE_ASCII 0x44 ~gsack01~   #8  //ground icon
-    WRITE_ASCII 0x58 ~cb!mort~   #8  //carried icon 
  
 COPY ~gavin_bg2/herbalist/itm/b!cassil.itm~ ~override~ 
     SAY NAME1 @130 
     SAY NAME2 @130 
     SAY UNIDENTIFIED_DESC @131 
     SAY DESC @131 
-    WRITE_ASCII 0x3a ~ib!casil~     #8  //inventory icon 
-    WRITE_ASCII 0x44 ~gsack01~   #8  //ground icon
-    WRITE_ASCII 0x58 ~cb!casil~   #8  //carried icon 
 
 COPY ~gavin_bg2/herbalist/itm/b!apple.itm~ ~override~ 
     SAY NAME1 @132 
     SAY NAME2 @132 
     SAY UNIDENTIFIED_DESC @133 
     SAY DESC @133 
-    WRITE_ASCII 0x3a ~ib!apple~   #8  //inventory icon 
-    WRITE_ASCII 0x44 ~gsack01~   #8  //ground icon
 
 COPY ~gavin_bg2/herbalist/itm/b!nutmeg.itm~ ~override~ 
     SAY NAME1 @134 
     SAY NAME2 @134 
     SAY UNIDENTIFIED_DESC @135 
     SAY DESC @135 
-    WRITE_ASCII 0x3a ~ib!nutmg~  #8  //inventory icon 
-    WRITE_ASCII 0x44 ~gsack01~   #8  //ground icon
-    WRITE_ASCII 0x58 ~cmisc16~   #8  //carried icon 
     
 COPY ~gavin_bg2/herbalist/itm/b!ginger.itm~ ~override~ 
     SAY NAME1 @136 
     SAY NAME2 @136 
     SAY UNIDENTIFIED_DESC @137 
     SAY DESC @137 
-    WRITE_ASCII 0x3a ~ib!gingr~    #8  //inventory icon 
-    WRITE_ASCII 0x44 ~gsack01~   #8  //ground icon
     
 COPY ~gavin_bg2/herbalist/itm/b!honey.itm~ ~override~ 
     SAY NAME1 @138 
     SAY NAME2 @138 
     SAY UNIDENTIFIED_DESC @139 
     SAY DESC @139 
-    WRITE_ASCII 0x3a ~ib!honey~   #8  //inventory icon 
-    WRITE_ASCII 0x44 ~gsack01~   #8  //ground icon
     
 COPY ~gavin_bg2/herbalist/itm/b!spirit.itm~ ~override~ 
     SAY NAME1 @140 
     SAY NAME2 @140 
     SAY UNIDENTIFIED_DESC @141 
     SAY DESC @141 
-    WRITE_ASCII 0x3a ~ib!spirt~     #8  //inventory icon 
-    WRITE_ASCII 0x44 ~gpotn01~   #8  //ground icon
 
 COPY ~gavin_bg2/herbalist/itm/b!bottle.itm~ ~override~ 
     SAY NAME1 @142 
     SAY NAME2 @142 
     SAY UNIDENTIFIED_DESC @143 
     SAY DESC @143 
-    WRITE_ASCII 0x3a ~ib!botl~  #8  //inventory icon 
     
 COPY ~gavin_bg2/herbalist/itm/b!potn1.itm~ ~override~ 
     SAY NAME1 @144 
     SAY NAME2 @144 
     SAY UNIDENTIFIED_DESC @145 
     SAY DESC @145 
-    WRITE_ASCII 0x3a ~ib!pot1~  #8  //inventory icon 
     
 COPY ~gavin_bg2/herbalist/itm/b!dkbery.itm~ ~override~ 
     SAY NAME1 @146 
     SAY NAME2 @146 
     SAY UNIDENTIFIED_DESC @147 
     SAY DESC @147 
-    WRITE_ASCII 0x3a ~ib!dkbry~  #8  //inventory icon 
     
 COPY ~gavin_bg2/herbalist/itm/b!felsul.itm~ ~override~ 
     SAY NAME1 @148 
     SAY NAME2 @148 
     SAY UNIDENTIFIED_DESC @149 
     SAY DESC @149 
-    WRITE_ASCII 0x3a ~ib!felsl~  #8  //inventory icon 
     
 COPY ~gavin_bg2/herbalist/itm/b!ffoil.itm~ ~override~ 
     SAY NAME1 @150 
     SAY NAME2 @150 
     SAY UNIDENTIFIED_DESC @151 
     SAY DESC @151 
-    WRITE_ASCII 0x3a ~ib!ffoil~  #8  //inventory icon 
     
 COPY ~gavin_bg2/herbalist/itm/b!mule.itm~ ~override~ 
     SAY NAME1 @152 
     SAY NAME2 @152 
     SAY UNIDENTIFIED_DESC @153 
     SAY DESC @153 
-    WRITE_ASCII 0x3a ~ib!mule~  #8  //inventory icon 
     
 COPY ~gavin_bg2/herbalist/itm/b!silsap.itm~ ~override~ 
     SAY NAME1 @154 
     SAY NAME2 @154 
     SAY UNIDENTIFIED_DESC @155 
     SAY DESC @155 
-    WRITE_ASCII 0x3a ~ib!silsp~  #8  //inventory icon     
 
 COPY ~gavin_bg2/herbalist/itm/b!potn2.itm~ ~override~ 
     SAY NAME1 @156 
     SAY NAME2 @156 
     SAY UNIDENTIFIED_DESC @157 
     SAY DESC @157 
-    WRITE_ASCII 0x3a ~ib!brmol~  #8  //inventory icon     
     
 COPY ~gavin_bg2/herbalist/itm/b!brmold.itm~ ~override~ 
     SAY NAME1 @158 
     SAY NAME2 @158 
     SAY UNIDENTIFIED_DESC @159 
     SAY DESC @159 
-    WRITE_ASCII 0x3a ~ib!brmld~  #8  //inventory icon     
     
 COPY ~gavin_bg2/herbalist/itm/b!algae.itm~ ~override~ 
     SAY NAME1 @160 
     SAY NAME2 @160 
     SAY UNIDENTIFIED_DESC @161 
     SAY DESC @161 
-    WRITE_ASCII 0x3a ~ib!algae~  #8  //inventory icon 
     
 COPY ~gavin_bg2/herbalist/itm/b!lime.itm~ ~override~ 
     SAY NAME1 @162 
     SAY NAME2 @162 
     SAY UNIDENTIFIED_DESC @163 
     SAY DESC @163 
-    WRITE_ASCII 0x3a ~ib!lime~  #8  //inventory icon 
 
 COPY ~gavin_bg2/herbalist/itm/b!whitl.itm~ ~override~ 
     SAY NAME1 @164 
     SAY NAME2 @164 
     SAY UNIDENTIFIED_DESC @165 
     SAY DESC @165 
-    WRITE_ASCII 0x3a ~ib!whitl~  #8  //inventory icon 
     
 COPY ~gavin_bg2/herbalist/itm/b!cotblm.itm~ ~override~ 
     SAY NAME1 @166 
     SAY NAME2 @166 
     SAY UNIDENTIFIED_DESC @167 
     SAY DESC @167 
-    WRITE_ASCII 0x3a ~ib!cotbm~  #8  //inventory icon 
     
 COPY ~gavin_bg2/herbalist/itm/b!potn3.itm~ ~override~ 
     SAY NAME1 @168 
     SAY NAME2 @168 
     SAY UNIDENTIFIED_DESC @169 
     SAY DESC @169 
-    WRITE_ASCII 0x3a ~ib!pot3~  #8  //inventory icon 
 
 COPY ~gavin_bg2/herbalist/itm/b!prkly.itm~ ~override~ 
     SAY NAME1 @174 
     SAY NAME2 @174 
     SAY UNIDENTIFIED_DESC @175 
     SAY DESC @175 
-    WRITE_ASCII 0x3a ~ib!prkly~  #8  //inventory icon 
     
 COPY ~gavin_bg2/herbalist/itm/b!sens.itm~ ~override~ 
     SAY NAME1 @176 
     SAY NAME2 @176 
     SAY UNIDENTIFIED_DESC @177 
     SAY DESC @177 
-    WRITE_ASCII 0x3a ~ib!sens~  #8  //inventory icon 
     
          
 COPY ~gavin_bg2/herbalist/itm/b!potbag.sto~ ~override~ 
@@ -383,7 +347,6 @@ COPY ~gavin_bg2/herbalist/itm/b!potbag.itm~ ~override~
     SAY NAME2 @170 
     SAY UNIDENTIFIED_DESC @171 
     SAY DESC @171 
-    WRITE_ASCII 0x3a ~ib!potbg~  #8  //inventory icon 
     
 COPY ~gavin_bg2/herbalist/itm/b!potbg1.sto~ ~override~ 
     SAY NAME2 @170 
@@ -393,7 +356,6 @@ COPY ~gavin_bg2/herbalist/itm/b!potbg1.itm~ ~override~
     SAY NAME2 @170 
     SAY UNIDENTIFIED_DESC @171 
     SAY DESC @171 
-    WRITE_ASCII 0x3a ~ib!potb1~  #8  //inventory icon 
     
 COPY ~gavin_bg2/herbalist/itm/b!potbg2.sto~ ~override~ 
     SAY NAME2 @170 
@@ -403,7 +365,6 @@ COPY ~gavin_bg2/herbalist/itm/b!potbg2.itm~ ~override~
     SAY NAME2 @170 
     SAY UNIDENTIFIED_DESC @171 
     SAY DESC @171 
-    WRITE_ASCII 0x3a ~ib!potb2~  #8  //inventory icon 
     
 COPY ~gavin_bg2/herbalist/itm/b!potbg3.sto~ ~override~ 
     SAY NAME2 @170 
@@ -413,7 +374,6 @@ COPY ~gavin_bg2/herbalist/itm/b!potbg3.itm~ ~override~
     SAY NAME2 @170 
     SAY UNIDENTIFIED_DESC @171 
     SAY DESC @171 
-    WRITE_ASCII 0x3a ~ib!potb3~  #8  //inventory icon 
     
 COPY ~gavin_bg2/herbalist/itm/b!potbg4.sto~ ~override~ 
     SAY NAME2 @170 
@@ -423,7 +383,6 @@ COPY ~gavin_bg2/herbalist/itm/b!potbg4.itm~ ~override~
     SAY NAME2 @170 
     SAY UNIDENTIFIED_DESC @171 
     SAY DESC @171 
-    WRITE_ASCII 0x3a ~ib!potb4~  #8  //inventory icon 
     
 COPY ~gavin_bg2/herbalist/sto/b!herb01.sto~ ~override~ 
   SAY NAME2 @178 
