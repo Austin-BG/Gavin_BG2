@@ -11,15 +11,5 @@ IF
 THEN 
     RESPONSE #100 
         SetGlobal("B!GavRingPlaced","GLOBAL",2)
-END 
-
-IF 
-    HasItem("B!PCRING",Player1) 
-    Global("B!GavRingPlaced","GLOBAL",2) 
-    !StateCheck(Player1,CD_STATE_NOTVALID) 
-    !See([ENEMY]) 
-    CombatCounter(0) 
-THEN 
-    RESPONSE #100 
         ActionOverride(Player1,StartDialog("player1",Player1))
 END 
