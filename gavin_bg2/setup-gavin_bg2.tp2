@@ -32,67 +32,67 @@ ALWAYS
       OUTER_SET bg2_chapter = bg2_chapter + 1
       OUTER_SPRINT name_source ~bg2_chapter_%i%~
       OUTER_SET EVAL ~%name_source%~ = bg2_chapter
-    END
-
-
-
-///////////////////////////////////////////
-/* all following actions are only processed ONCE for the whole mod, independent of un- and reinstalling of single components */
-
-
-    APPEND ~STATE.IDS~
-      ~0x80101FEF CD_STATE_NOTVALID~
-    UNLESS ~CD_STATE_NOTVALID~ 
-
-    ACTION_IF (GAME_IS ~bgt tob bg2~ AND NOT FILE_EXISTS_IN_GAME ~cdbehbla.pro~) THEN BEGIN //makes sure the fixpack isn't already installed
-    
-      INCLUDE ~gavin_bg2/lib/bg2fp.tpa~ // essentially eou romance fixes plus some other miscellany
-      
-    END        
+    END 
 
     ACTION_IF NOT FILE_EXISTS_IN_GAME ~bimoen2.dlg~ THEN BEGIN
       COMPILE ~gavin_bg2/lib/b!bimoen2.d~
     END
 
     ACTION_IF GAME_IS ~bgt bg2 tob~ THEN BEGIN
+    
+      OUTER_SPRINT ~tra_location~ ~gavin_bg2/languages~
+    
       INCLUDE ~gavin_bg2/lib/tob2soa.tph~
       INCLUDE ~gavin_bg2/lib/kit_ids_fixer.tpa~
-      INCLUDE ~gavin_bg2/lib/b!times.tph~
-    END
+      INCLUDE ~gavin_bg2/lib/b!times.tph~    
+    
+      APPEND ~STATE.IDS~
+        ~0x80101FEF CD_STATE_NOTVALID~
+      UNLESS ~CD_STATE_NOTVALID~ 
 
+      ACTION_IF !FILE_EXISTS_IN_GAME ~cdbehbla.pro~) THEN BEGIN //makes sure the fixpack isn't already installed
+      
+        INCLUDE ~gavin_bg2/lib/bg2fp.tpa~ // essentially eou romance fixes plus some other miscellany
+        
+      END         
+      
+    END ELSE BEGIN // bg2ee, eet
+    
+      OUTER_SPRINT ~tra_location~ ~weidu_external/gavin_bg2/languages~
 
-/* Handling of correctly formatted tra-files!! ---------------------- */
+      ACTION_DEFINE_ARRAY fl#reload BEGIN game-gavin_bg2.tp2 journal-gavin_bg2.tra END
+      ACTION_DEFINE_ARRAY fl#noconvert BEGIN game-ee-gavin_bg2.tra setup-gavin_bg2.tra END
 
- 
-//ACTION_DEFINE_ARRAY fl#noconvert BEGIN setup-gavin_bg2.tra END
-
-    ACTION_DEFINE_ARRAY fl#reload BEGIN game-gavin_bg2.tp2 game-ee-gavin_bg2.tra 
-journal-gavin_bg2.tra END
-
-     LAF HANDLE_CHARSETS
+      LAF HANDLE_CHARSETS
       INT_VAR
        infer_charset = 1
       STR_VAR
        tra_path = EVAL ~gavin_bg2/languages~
+       out_path = ~weidu_external/gavin_bg2/languages~
        noconvert_array = fl#noconvert
        reload_array = fl#reload
-     END
+      END
+      
+      LOAD_TRA ~gavin_bg2/languages/%LANGUAGE%/game-ee-gavin_bg2.tra~ 
+       
+    END  
 
-    COPY ~gavin_bg2/install/B!component.xx~ ~gavin_bg2/backup/gavinbg2reinstall.mrk~
-
- END //ACTION_IF !FILE_EXISTS gavinbg2reinstall.mrk
+  END //ACTION_IF !FILE_EXISTS gavinbg2reinstall.mrk
 
 END //ALWAYS
 
-AUTO_TRA ~gavin_bg2/languages/%s~
+AUTO_TRA ~%tra_location%/%s~
 
 LANGUAGE ~English~ ~english~ ~gavin_bg2/languages/english/setup-gavin_bg2.tra~ 
-~gavin_bg2/languages/english/game-gavin_bg2.tra~ 
-~gavin_bg2/languages/english/journal-gavin_bg2.tra~
+                             ~gavin_bg2/languages/english/game-gavin_bg2.tra~ 
+                             ~gavin_bg2/languages/english/journal-gavin_bg2.tra~
 
-LANGUAGE ~Russian (by Kirian & Arcanecoast Team)~ ~russian~ ~gavin_bg2/languages/russian/setup-gavin_bg2.tra~ 
-~gavin_bg2/languages/russian/game-gavin_bg2.tra~ 
-~gavin_bg2/languages/russian/journal-gavin_bg2.tra~
+LANGUAGE ~Russian (by Kirian & Arcanecoast Team)~ ~russian~ ~gavin_bg2/languages/english/setup-gavin_bg2.tra~ 
+                                                            ~gavin_bg2/languages/english/game-gavin_bg2.tra~ 
+                                                            ~gavin_bg2/languages/english/journal-gavin_bg2.tra~
+                                                            ~gavin_bg2/languages/russian/setup-gavin_bg2.tra~ 
+                                                            ~gavin_bg2/languages/russian/game-gavin_bg2.tra~ 
+                                                            ~gavin_bg2/languages/russian/journal-gavin_bg2.tra~
 
 
 BEGIN @127 
