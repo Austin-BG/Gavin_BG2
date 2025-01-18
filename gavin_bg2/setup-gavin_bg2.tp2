@@ -159,7 +159,9 @@ BEGIN @194 DESIGNATED 2
                      (MOD_IS_INSTALLED ~gavin_bg2/setup-gavin_bg2.tp2~ ~13~) OR 
                      (MOD_IS_INSTALLED ~gavin_bg2/setup-gavin_bg2.tp2~ ~14~)) @999
   LABEL ~b!gavin_bg2_monoromance~
+  
   EXTEND_TOP ~b!gavs.bcs~ ~gavin_bg2/script/b!rom_kill.baf~ 
+  
 BEGIN @195 DESIGNATED 3 
   FORCED_SUBCOMPONENT @191  
   REQUIRE_PREDICATE ((MOD_IS_INSTALLED ~gavin_bg2/setup-gavin_bg2.tp2~ ~0~) OR 
@@ -169,13 +171,8 @@ BEGIN @195 DESIGNATED 3
                      (MOD_IS_INSTALLED ~gavin_bg2/setup-gavin_bg2.tp2~ ~13~) OR 
                      (MOD_IS_INSTALLED ~gavin_bg2/setup-gavin_bg2.tp2~ ~14~)) @999
   LABEL ~b!gavin_bg2_multiromance~
+  
   EXTEND_TOP ~b!gavs.bcs~ ~gavin_bg2/script/b!rom_nokill.baf~ 
-
-/* BEGIN @182 
-  SUBCOMPONENT @183 
-  LAF cd_portrait_npc STR_VAR source = ~b!gavin~ destination = ~bgavin~ source_path = ~gavin_bg2/portraits~ END */
-
-/* fortunately, the EE games scale the portraits, so I can just use the large ones for all sizes. */
 
 BEGIN @184 DESIGNATED 4
   SUBCOMPONENT @183

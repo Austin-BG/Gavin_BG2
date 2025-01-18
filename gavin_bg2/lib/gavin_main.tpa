@@ -7,15 +7,15 @@ END
 /* ADD_JOURNAL */
 
 /* The Final Battle with Bodhi. */
-ADD_JOURNAL EXISTING TITLE (#74337) @10000 @10001 @10002 USING ~gavin_bg2/languages/%LANGUAGE%/journal-gavin_bg2.tra~
+ADD_JOURNAL EXISTING TITLE (#74337) @10000 @10001 @10002 USING ~%tra_location%/%LANGUAGE%/journal-gavin_bg2.tra~
 
-ADD_JOURNAL TITLE (@10014) @10003 @10004 USING ~gavin_bg2/languages/%LANGUAGE%/journal-gavin_bg2.tra~
+ADD_JOURNAL TITLE (@10014) @10003 @10004 USING ~%tra_location%/%LANGUAGE%/journal-gavin_bg2.tra~
 
-ADD_JOURNAL TITLE (@10015) @10006 @10007 @10008 USING ~gavin_bg2/languages/%LANGUAGE%/journal-gavin_bg2.tra~
+ADD_JOURNAL TITLE (@10015) @10006 @10007 @10008 USING ~%tra_location%/%LANGUAGE%/journal-gavin_bg2.tra~
 
-ADD_JOURNAL TITLE (@10016) @10011 @10012 @10013 USING ~gavin_bg2/languages/%LANGUAGE%/journal-gavin_bg2.tra~
+ADD_JOURNAL TITLE (@10016) @10011 @10012 @10013 USING ~%tra_location%/%LANGUAGE%/journal-gavin_bg2.tra~
 
-ADD_JOURNAL @10005 @10009 @10010 USING ~gavin_bg2/languages/%LANGUAGE%/journal-gavin_bg2.tra~
+ADD_JOURNAL @10005 @10009 @10010 USING ~%tra_location%/%LANGUAGE%/journal-gavin_bg2.tra~
 
 
 /* Areas, Audio, and Music */ 
@@ -832,10 +832,10 @@ ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
 END
 
 COMPILE EVALUATE_BUFFER ~gavin_bg2/dialogue/b!pid.d~  
-  USING ~gavin_bg2/languages/%LANGUAGE%/pid_soa_tob.tra~       // PID - KEEP THIS LAST!
+  USING ~%tra_location%/%LANGUAGE%/pid_soa_tob.tra~       // PID - KEEP THIS LAST!
 
 COMPILE EVALUATE_BUFFER ~gavin_bg2/script/b!gavs.baf~  
-  USING ~gavin_bg2/languages/%LANGUAGE%/game-gavin_bg2.tra~    // Gavin's override 
+  USING ~%tra_location%/%LANGUAGE%/game-gavin_bg2.tra~    // Gavin's override 
 COMPILE EVALUATE_BUFFER ~gavin_bg2/script/b!gavd.baf~     // Gavin's dream script 
 COMPILE ~gavin_bg2/script/b!lanies.baf~   // Moves Lanie to the Temple of Oghma
 COMPILE ~gavin_bg2/script/b!lanie1.baf~   // Confrontation with Miranda and Lanie 
@@ -846,7 +846,7 @@ COMPILE ~gavin_bg2/script/b!rest1.baf~    // resting at an inn
 COMPILE ~gavin_bg2/script/b!rest2.baf~    // resting outdoors 
 COMPILE ~gavin_bg2/script/b!rest3.baf~    // resting in a dungeon 
 COMPILE ~gavin_bg2/script/b!gavstr.baf~
-  USING ~gavin_bg2/languages/%LANGUAGE%/game-gavin_bg2.tra~  // string fixer 
+  USING ~%tra_location%/%LANGUAGE%/game-gavin_bg2.tra~  // string fixer 
 COMPILE ~gavin_bg2/script/b!rezgav.baf~   // resurrects Gavin 
 COMPILE ~gavin_bg2/script/b!drunk1.baf~   // sends Gavin and PC to prison 
 COMPILE ~gavin_bg2/script/b!drunk2.baf~   // spawns prison guard and opens door 
@@ -868,7 +868,7 @@ COMPILE ~gavin_bg2/script/b!three2.baf~   // ends threesome in the Lust Chambers
 COMPILE ~gavin_bg2/script/b!three3.baf~   // rests party before ending threesome in the Lust Chambers 
 
 EXTEND_BOTTOM ~ar0203.bcs~   ~gavin_bg2/script/b!ar0203.baf~  
-  USING ~gavin_bg2/languages/%LANGUAGE%/game-gavin_bg2.tra~        // Gavin reacts to empathic manifestation 
+  USING ~%tra_location%/%LANGUAGE%/game-gavin_bg2.tra~        // Gavin reacts to empathic manifestation 
 EXTEND_BOTTOM ~ar0300.bcs~   ~gavin_bg2/script/b!ar0319.baf~         // Docks spawns 
 EXTEND_TOP    ~ar0400.bcs~   ~gavin_bg2/script/b!ar0408.baf~         // Gavin spawns, Slums spawns
 EXTEND_TOP    ~ar0500.bcs~   ~gavin_bg2/script/b!ar0500.baf~         // Spawns Master Siman 
@@ -943,7 +943,7 @@ ACTION_IF GAME_IS ~tob bg2ee eet~ THEN BEGIN
 /*    COMPILE ~gavin_bg2/dialogue/tob/b!tob_night.d~                 // ToB player-initiated steamy bits
 --taken out, as these are only placeholders */
     COMPILE ~gavin_bg2/dialogue/tob/b!tob_pid.d~     
-      USING ~gavin_bg2/languages/%LANGUAGE%/pid_soa_tob.tra~         // Gavin's ToB PID 
+      USING ~%tra_location%/%LANGUAGE%/pid_soa_tob.tra~         // Gavin's ToB PID 
     
     COMPILE ~gavin_bg2/script/tob/b!amket1.baf~                      // Spawn Aleto
     COMPILE ~gavin_bg2/script/tob/b!amket2.baf~                      // gets rid of Imoen and Aleto 
@@ -951,7 +951,7 @@ ACTION_IF GAME_IS ~tob bg2ee eet~ THEN BEGIN
     COMPILE ~gavin_bg2/script/tob/b!amket4.baf~                      // Gavin leaves 
     COMPILE ~gavin_bg2/script/tob/b!amket5.baf~                      // rests party and gets Gavin back in group 
     COMPILE ~gavin_bg2/script/tob/b!gav25s.baf~    
-  USING ~gavin_bg2/languages/%LANGUAGE%/game-gavin_bg2.tra~                     // Gavin's ToB override script 
+  USING ~%tra_location%/%LANGUAGE%/game-gavin_bg2.tra~                     // Gavin's ToB override script 
     COMPILE ~gavin_bg2/script/tob/b!gav25d.baf~                      // Gavin's ToB dream script 
     COMPILE ~gavin_bg2/script/tob/master_wraith/b!gavmw1.baf~        // spawns mw lanie
     EXTEND_BOTTOM ~cut218g.bcs~ ~gavin_bg2/script/tob/master_wraith/b!gavmw2.baf~ // changes Lanie into another wraith
