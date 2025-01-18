@@ -2322,17 +2322,19 @@ END
 IF ~~ t3.6 
 SAY @503 
 + ~!Global("B!GavRA","GLOBAL",0) 
-      !Global("B!GavRA","GLOBAL",3)~ + @504 DO ~SetGlobal("B!GavRA","GLOBAL",3) 
-            SetGlobal("B!GavRomBreak","GLOBAL",1)~ + t3.6a 
-+ ~OR(2) Global("B!GavRA","GLOBAL",0) 
-      Global("B!GavRA","GLOBAL",3)~ + @504 + t3.6a 
+   !Global("B!GavRA","GLOBAL",3)~ + @504 DO ~SetGlobal("B!GavRA","GLOBAL",3) 
+                                             SetGlobal("B!GavRomBreak","GLOBAL",1)~ + t3.6a 
++ ~OR(2) 
+    Global("B!GavRA","GLOBAL",0) 
+    Global("B!GavRA","GLOBAL",3)~ + @504 + t3.6a 
 ++ @505 DO ~IncrementGlobal("B!GavOffend","GLOBAL",-1)~ + t3.6b 
 + ~!Global("B!GavRA","GLOBAL",0) 
-      !Global("B!GavRA","GLOBAL",3)~ + @506 + t3.6c 
-+ ~OR(2) Global("B!GavRA","GLOBAL",0) 
-      Global("B!GavRA","GLOBAL",3)~ + @506 DO ~SetGlobal("B!GavRA","GLOBAL",3) 
-            SetGlobal("B!GavRomBreak","GLOBAL",1) 
-            IncrementGlobal("B!GavLove","GLOBAL",-1)~ + t3.6c 
+   !Global("B!GavRA","GLOBAL",3)~ + @506 DO ~SetGlobal("B!GavRA","GLOBAL",3) 
+                                             SetGlobal("B!GavRomBreak","GLOBAL",1) 
+                                             IncrementGlobal("B!GavLove","GLOBAL",-1)~ + t3.6c 
++ ~OR(2) 
+     Global("B!GavRA","GLOBAL",0) 
+     Global("B!GavRA","GLOBAL",3)~ + @506 + t3.6c 
 ++ @507 DO ~IncrementGlobal("B!GavOffend","GLOBAL",-1)~ + t3.6d 
 END 
 
