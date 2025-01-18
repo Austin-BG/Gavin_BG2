@@ -3065,7 +3065,7 @@ END
 
 IF ~~ t3.doforyou  
 SAY @700 
-++ @668 + t3.1chores  
++ ~GlobalGT("B!GavRA","GLOBAL",0)~ + @668 + t3.1chores  
 + ~Global("B!GavRA","GLOBAL",1)~ + @669 + t3.1hug 
 + ~Global("B!GavRA","GLOBAL",2)~ + @669 + t3.2hug 
 + ~Global("B!GavRA","GLOBAL",3)~ + @669 + t3.3hug 
@@ -3073,7 +3073,7 @@ SAY @700
 ++ @701 + t3.gear 
 ++ @702 + t3.watch 
 + ~Global("B!GavBhaal","GLOBAL",1)~ + @672 + t3.nocando 
-++ @673 + t3.nocando 
++ ~GlobalGT("B!GavRA","GLOBAL",0)~ + @673 + t3.nocando 
 + ~OR(3) Global("B!GavRA","GLOBAL",1) 
       Global("B!GavRA","GLOBAL",3)~ + @675 + t3.13sex 
 + ~Global("B!GavRA","GLOBAL",2)~ + @675 + t3.2sex 
