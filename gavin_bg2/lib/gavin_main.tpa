@@ -914,19 +914,12 @@ END
 
 ACTION_IF GAME_IS ~tob bg2ee eet~ THEN BEGIN 
     COPY ~gavin_bg2/creatures/b!gabard.cre~ ~override~ 
-      WRITE_ASCII 0x248 ~b!gabard~   #8   // assign override script
-      WRITE_ASCII 0x2cc ~b!gabard~    #8  // assign pre-joining dialogue file
-      WRITE_ASCII 0x280 ~b!gabard~ #32    // assign DV 
       SAY NAME1 @400 
       SAY NAME2 @400 
       
     COPY ~gavin_bg2/creatures/b!mwlan.cre~ ~override~ 
-      WRITE_ASCII 0x248 ~b!mwlan~ #8    //assign override script
-      WRITE_ASCII 0x2cc ~b!mwlan~ #8    //assign pre-joining dialogue file
-      WRITE_ASCII 0x280 ~b!mwlan~ #32   //assign DV
-      WRITE_ASCII 0x34  ~b!lanies~ #8   // assign small portrait 
-      SAY NAME1 ~Lanie~ 
-      SAY NAME2 ~Lanie~ 
+      SAY NAME1 @337
+      SAY NAME2 @337
       
     COMPILE ~gavin_bg2/script/b!rest4.baf~    // resting in the pocketplane 
     
