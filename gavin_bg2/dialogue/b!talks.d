@@ -2164,7 +2164,9 @@ SAY @451
           Global("B!GavRA","GLOBAL",4)~ + @453 DO ~SetGlobal("B!GavBhaal","GLOBAL",1)~ + t3.3x3 
 ++ @454 DO ~SetGlobal("B!GavBhaal","GLOBAL",1)~ + t3.3x4 
 + ~Global("B!GavRA","GLOBAL",2)~ + @455 DO ~SetGlobal("B!GavBhaal","GLOBAL",1)~ + t3.3x7 
-++ @456 DO ~SetGlobal("B!GavBhaal","GLOBAL",1)~ + t3.3x5 
++ ~!GlobalGT("B!GavinEngaged","GLOBAL",0) 
+      OR(2) Global("B!GavRA","GLOBAL",1) 
+          Global("B!GavRA","GLOBAL",4)~ + @456 DO ~SetGlobal("B!GavBhaal","GLOBAL",1)~ + t3.3x5 
 ++ @457 DO ~SetGlobal("B!GavBhaal","GLOBAL",1)~ + t3.3x6 
 END 
 
