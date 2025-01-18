@@ -2599,7 +2599,7 @@ END
 
 IF ~~ t3.t15n 
 SAY @587 
-IF ~~ THEN + t3.t16 
+IF ~~ THEN + t3.t15o
 END 
 
 IF ~~ t3.t15o 
