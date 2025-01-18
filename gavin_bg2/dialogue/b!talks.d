@@ -1712,7 +1712,7 @@ SAY @341
          Global("B!GavRA","GLOBAL",2)~ + @345 + t2.13 
 + ~Global("B!GavRA","GLOBAL",4)~ + @345 + t2.14 
 ++ @346 + t2.8
-++ @347 + t2.9
+++ @347 + t2.23
 ++ @348 + bexit
 END
 
