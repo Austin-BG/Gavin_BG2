@@ -745,19 +745,10 @@ COPY_EXISTING ~wilmat.cre~ ~override~
 /* Portrait Assignment */
 LAF cd_portrait_npc STR_VAR source = ~b!gavin~ destination = ~b!gavin~ source_path = ~gavin_bg2/portraits~ END
 
-
 COPY ~gavin_bg2/creatures/b!gav08.cre~ ~override~
-  ADD_CRE_ITEM ~chan01~   #0 #0 #0 ~IDENTIFIED~ ~ARMOR~
-  ADD_CRE_ITEM ~shld05~   #0 #0 #0 ~IDENTIFIED~ ~SHIELD~
-  ADD_CRE_ITEM ~b!gavrng~ #0 #0 #0 ~IDENTIFIED~ ~LRING~
-  ADD_CRE_ITEM ~hamm01~   #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP
+     ~gavin_bg2/creatures/b!gav13.cre~ ~override~
   SAY NAME1 @4
   SAY NAME2 @4
-  WRITE_ASCII 0x248 ~b!gavs~    #8     // assign override script
-  WRITE_ASCII 0x2cc ~b!gav~     #8     // assign pre-joining dialogue file
-  WRITE_ASCII 0x280 ~b!gavin2~ #32  // assign DV 
-  WRITE_ASCII 0x34  ~b!gavins~  #8    // assign small portrait 
-  WRITE_ASCII 0x3c  ~b!gavinm~ #8   // assign medium portrait
   SAY INITIAL_MEETING @5
   SAY MORALE @6
   SAY HAPPY @7
@@ -803,64 +794,10 @@ COPY ~gavin_bg2/creatures/b!gav08.cre~ ~override~
   SAY SPELL_DISRUPTED @47
   SAY SET_A_TRAP @48
   SAY BIO @49
-
-COPY ~gavin_bg2/creatures/b!gav13.cre~ ~override~
-  ADD_CRE_ITEM ~chan01~   #0 #0 #0 ~IDENTIFIED~ ~ARMOR~
-  ADD_CRE_ITEM ~shld05~   #0 #0 #0 ~IDENTIFIED~ ~SHIELD~
-  ADD_CRE_ITEM ~b!gavrng~ #0 #0 #0 ~IDENTIFIED~ ~LRING~
-  ADD_CRE_ITEM ~hamm01~   #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP
-  SAY NAME1 @4
-  SAY NAME2 @4
-  WRITE_ASCII 0x248 ~b!gav25s~   #8  // assign override script
-  WRITE_ASCII 0x2cc ~b!gav25~    #8  // assign pre-joining dialogue file
-  WRITE_ASCII 0x280 ~b!gavin2~   #32 // assign DV 
-  WRITE_ASCII 0x34  ~b!gavins~    #8  // assign small portrait 
-  WRITE_ASCII 0x3c  ~b!gavinm~   #8  // assign medium portrait
-  SAY INITIAL_MEETING @5
-  SAY MORALE @6
-  SAY HAPPY @7
-  SAY UNHAPPY_ANNOYED @8
-  SAY UNHAPPY_SERIOUS @9
-  SAY UNHAPPY_BREAKING @10
-  SAY LEADER @11
-  SAY TIRED @12
-  SAY BORED @13
-  SAY BATTLE_CRY1 @14
-  SAY BATTLE_CRY2 @15
-  SAY BATTLE_CRY3 @16
-  SAY BATTLE_CRY4 @17
-  SAY DAMAGE @18
-  SAY DYING @19
-  SAY HURT @20
-  SAY AREA_FOREST @21
-  SAY AREA_CITY @22
-  SAY AREA_DUNGEON @23
-  SAY AREA_DAY @24
-  SAY AREA_NIGHT @25
-  SAY SELECT_COMMON1 @26
-  SAY SELECT_COMMON2 @27
-  SAY SELECT_COMMON3 @28
-  SAY SELECT_COMMON4 @29
-  SAY SELECT_COMMON5 @30
-  SAY SELECT_COMMON6 @31
-  SAY SELECT_ACTION1 @32
-  SAY SELECT_ACTION2 @33
-  SAY SELECT_ACTION3 @34
-  SAY SELECT_ACTION4 @35
-  SAY SELECT_ACTION5 @36
-  SAY SELECT_ACTION6 @37
-  SAY SELECT_ACTION7 @38
-  SAY SELECT_RARE1 @39
-  SAY SELECT_RARE2 @40
-  SAY CRITICAL_HIT @41
-  SAY CRITICAL_MISS @42
-  SAY TARGET_IMMUNE @43
-  SAY INVENTORY_FULL @44
-  SAY PICKED_POCKET @45
-  SAY HIDDEN_IN_SHADOWS @46
-  SAY SPELL_DISRUPTED @47
-  SAY SET_A_TRAP @48
-  SAY BIO @49
+  PATCH_IF GAME_IS ~bg2ee eet~ BEGIN 
+    WRITE_ASCII 0x34 ~b!gavinm~ #8
+    WRITE_ASCII 0x3c ~b!gavinl~ #8
+  END    
 
 COPY_EXISTING ~clmom.cre~ ~override~
   WRITE_ASCII 0x280 ~clmom~ #32 // assign DV
@@ -1238,7 +1175,7 @@ BEGIN @195
 
 /* BEGIN @182 
   SUBCOMPONENT @183 
-  LAF cd_portrait_npc STR_VAR source = ~b!gavin~ destination = ~bgavin~ source_path = ~gavin_bg2/portraits~ END
+  LAF cd_portrait_npc STR_VAR source = ~b!gavin~ destination = ~bgavin~ source_path = ~gavin_bg2/portraits~ END */
 
 /* fortunately, the EE games scale the portraits, so I can just use the large ones for all sizes. */
 
