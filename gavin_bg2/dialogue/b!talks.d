@@ -4227,7 +4227,7 @@ SAY @1086
 + ~Global("B!GavRA","GLOBAL",3) 
       Global("B!GavRomBreak","GLOBAL",1)~ + @1089 DO ~IncrementGlobal("B!GavLove","GLOBAL",1)~ + t7.12d 
 + ~Global("B!GavRA","GLOBAL",3) 
-      Global("B!GavRomBreak","GLOBAL",1)~ + @1089 DO ~IncrementGlobal("B!GavLove","GLOBAL",1)~ + t7.12e 
+      Global("B!GavRomBreak","GLOBAL",2)~ + @1089 DO ~IncrementGlobal("B!GavLove","GLOBAL",1)~ + t7.12e 
 + ~Global("B!GavRA","GLOBAL",4)~ + @1089 DO ~IncrementGlobal("B!GavLove","GLOBAL",1)~ + t7.12f 
 + ~Alignment(Player1,MASK_EVIL)~ + @1092 DO ~IncrementGlobal("B!GavChange","GLOBAL",-1) 
       IncrementGlobal("B!GavLove","GLOBAL",-1)~ + t7.13a 
