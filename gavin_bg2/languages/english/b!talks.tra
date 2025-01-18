@@ -542,7 +542,7 @@
 @541  = ~Who does?~
 @542  = ~No idea, but it would have to be worse.~
 @543  = ~I do.~
-@544  = ~Depends on the god, I guess. If I carried the blood of Liira, goddess of dancing, maybe I wouldn't end up in a heap quite so often. But one of the others... Bhaal, for instance... no I wouldn't want that.~
+@544  = ~Depends on the god, I guess. If I carried the blood of Lliira, goddess of dancing, maybe I wouldn't end up in a heap quite so often. But one of the others... Bhaal, for instance... no I wouldn't want that.~
 @545  = ~Which one?~
 @546  = ~Sune.~
 @547  = ~Chauntea.~
@@ -719,7 +719,7 @@
 @718  = ~Like all elves, I venerate the Seldarine.~
 @719  = ~Aerdrie Faenya, the elven goddess of air and weather.~
 @720  = ~Angharradh, the elven goddess of spring and fertility.~
-@721  = ~Correlon Larethian, the First of the Seldarine.~
+@721  = ~Corellon Larethian, the First of the Seldarine.~
 @722  = ~Deep Sashelas, the elven Lord of the Undersea.~
 @723  = ~Erevan Ilesere, the elven god of mischief.~
 @724  = ~Fenmarel Mestarine, the god of wild elves.~
@@ -731,7 +731,7 @@
 @730  = ~Solonor Thelandira, the elven god of archery.~
 @731  = ~Abbathor, the dwarven god of wealth... or greed.~
 @732  = ~Berronar Truesilver, the dwarven goddess of the home.~
-@733  = ~Clanggedin Silverbeard, the dwarven god of battle.~
+@733  = ~Clangeddin Silverbeard, the dwarven god of battle.~
 @734  = ~Dugmaren Brightmantle, the dwarven god of invention.~
 @735  = ~Dumathoin, the dwarven god of mining.~
 @736  = ~Haela Brightaxe, the dwarven goddess of luck in battle.~
@@ -740,12 +740,12 @@
 @739  = ~Baravar Cloakshadow, the gnomish god of illusions.~
 @740  = ~Baervan Wildwanderer, the gnomish god of nature.~
 @741  = ~Callarduran Smoothhands, the gnomish god of stone.~
-@742  = ~Flandar Steelskin, the gnomish Master of Metal.~
+@742  = ~Flandal Steelskin, the gnomish Master of Metal.~
 @743  = ~Gaerdal Ironhand, the gnomish god of vigilance.~
 @744  = ~Garl Glittergold, the gnomish god of gems.~
 @745  = ~Segojan Earthcaller, the gnomish Lord of the Burrow.~
 @746  = ~Urdlen, the gnomish Crawler Below.~
-@747  = ~Avoreen, the halfling god of defense.~
+@747  = ~Arvoreen, the halfling god of defense.~
 @748  = ~Brandobaris, the hafling god of stealth and adventure.~
 @749  = ~Cyrrollalee, the halfling goddess of friendship and the home.~
 @750  = ~Sheela Peryroyl, the halfling goddess of nature.~
@@ -787,7 +787,7 @@
 @786  = ~Shaundakul, the Wanderer.~
 @787  = ~Talona, the Lady of Poison.~
 @788  = ~Garagos, Master of All Weapons.~
-@789  = ~Hoar, god of just retrubution.~
+@789  = ~Hoar, god of just retribution.~
 @790  = ~The Red Knight, Lady of Strategy.~
 @791  = ~Savras, god of Divination.~
 @792  = ~Sharess, goddess of pleasure.~
@@ -2649,7 +2649,7 @@
 @2648 = ~So why do you stay, if you find me so fallible?~
 @2649 = ~I had hoped you would not resemble your father so much.~
 @2650 = ~<CHARNAME>, I... I had better get to the point.~
-@2651 = ~(gulp) <CHARNAME>, I'm afriad you might have the wrong idea about me.~
+@2651 = ~(gulp) <CHARNAME>, I'm afraid you might have the wrong idea about me.~
 @2652 = ~Please, Gavin, don't make me ill. I have no desire to bed you. You are easy to look at, however, provided I ignore everything from the neck up.~
 @2653 = ~There's something about you that draws me in, even though I know what you are.~
 @2654 = ~Are you sure? You might enjoy a tumble.~
@@ -2694,7 +2694,7 @@
 @2693 = ~Quite sure.~
 @2694 = ~<CHARNAME>, I begin to think we've about exhausted this conversation, but I have to at least try.~
 @2695 = ~You might be the child of Bhaal, but you are also a <PRO_MANWOMAN>. I want to help you. I only hope I can.~
-@2696 = ~ I think you finding me in that temple happened for a reason. Maybe...~
+@2696 = ~I think you finding me in that temple happened for a reason. Maybe...~
 @2697 = ~Maybe your soul is reaching out, striving for freedom from the taint of the blood you bear. Maybe I can help you.~
 @2698 = ~And here I thought it was just the lure of a nice pair of shoulders.~
 @2699 = ~I don't think it's anything that lofty.~
