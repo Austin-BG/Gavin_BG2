@@ -793,14 +793,6 @@ COPY_EXISTING ~UDDROW23.cre~ ~override/b!masyrd.cre~
   WRITE_ASCII 0x280 ~b!masyrd~ #32 //DV
 
   
-//2da appending for dialogues
-APPEND ~pdialog.2da~
-~b!gavin2    b!gavp     b!gavj     b!gavd     b!gav25p     b!gav25j     b!gav25d     b!gav25s~
-UNLESS ~b!gavin2~
-
-APPEND ~interdia.2da~
-~b!gavin2   bb!gav     bb!gav25~
-UNLESS ~b!gavin2~ 
 
 COPY_EXISTING ~bharval.cre~ ~override~
     WRITE_BYTE 0x234 18    // sets level in first class to 18 
@@ -912,7 +904,28 @@ END ELSE BEGIN
     COMPILE ~gavin_bg2/script/b!kilgav.baf~       // Anomen kills Gavin 
 END 
 
-ACTION_IF GAME_IS ~tob bg2ee eet~ THEN BEGIN 
+ACTION_IF !GAME_IS ~tob bg2ee eet~ THEN BEGIN // soa-only
+
+    //2da appending for dialogues
+    APPEND ~pdialog.2da~
+    ~b!gavin2    b!gavp     b!gavj     b!gavd~
+    UNLESS ~b!gavin2~
+
+    APPEND ~interdia.2da~
+    ~b!gavin2   bb!gav~
+    UNLESS ~b!gavin2~ 
+
+END ELSE BEGIN // tob content
+
+    //2da appending for dialogues
+    APPEND ~pdialog.2da~
+    ~b!gavin2    b!gavp     b!gavj     b!gavd     b!gav25p     b!gav25j     b!gav25d     b!gav25s~
+    UNLESS ~b!gavin2~
+
+    APPEND ~interdia.2da~
+    ~b!gavin2   bb!gav     bb!gav25~
+    UNLESS ~b!gavin2~ 
+
     COPY ~gavin_bg2/creatures/b!gabard.cre~ ~override~ 
       SAY NAME1 @400 
       SAY NAME2 @400 
@@ -949,9 +962,9 @@ ACTION_IF GAME_IS ~tob bg2ee eet~ THEN BEGIN
     COMPILE ~gavin_bg2/script/tob/master_wraith/b!gavmw1.baf~        // spawns mw lanie
     EXTEND_BOTTOM ~cut218g.bcs~ ~gavin_bg2/script/tob/master_wraith/b!gavmw2.baf~ // changes Lanie into another wraith
 
-ACTION_IF GAME_IS ~eet~ THEN BEGIN
-  EXTEND_BOTTOM ~Ar4000.bcs~ ~gavin_bg2/script/tob/gavin_ar4000_eet.baf~   EVALUATE_BUFFER
-END
+    ACTION_IF GAME_IS ~eet~ THEN BEGIN
+      EXTEND_BOTTOM ~Ar4000.bcs~ ~gavin_bg2/script/tob/gavin_ar4000_eet.baf~   EVALUATE_BUFFER
+    END
 
     EXTEND_TOP ~anom25.bcs~  ~gavin_bg2/script/tob/b!tob_anomen.baf~     // Anomen's ToB material 
     EXTEND_TOP ~edwi25.bcs~  ~gavin_bg2/script/tob/b!tob_edwin.baf~      // Edwin ToB banters 
@@ -962,49 +975,49 @@ END
     EXTEND_TOP ~sarev25d.bcs~ ~gavin_bg2/script/tob/b!tob_sarevok_d.baf~ // Sarevok's ToB banters 
     EXTEND_TOP ~ar6200.bcs~   ~gavin_bg2/script/tob/b!ar6200.baf~        // Epilogues 
     
-/* Epilogues */ 
+    /* Epilogues */ 
 
-COPY ~gavin_bg2/2da/b!gavep0.2da~ ~override~ 
-    REPLACE ~99900~ @99900
+    COPY ~gavin_bg2/2da/b!gavep0.2da~ ~override~ 
+        REPLACE ~99900~ @99900
 
-COPY ~gavin_bg2/2da/b!gavep1.2da~ ~override~ 
-    REPLACE ~99901~ @99901
+    COPY ~gavin_bg2/2da/b!gavep1.2da~ ~override~ 
+        REPLACE ~99901~ @99901
 
-COPY ~gavin_bg2/2da/b!gavep2.2da~ ~override~ 
-    REPLACE ~99902~ @99902
+    COPY ~gavin_bg2/2da/b!gavep2.2da~ ~override~ 
+        REPLACE ~99902~ @99902
 
-COPY ~gavin_bg2/2da/b!gavep3.2da~ ~override~ 
-    REPLACE ~99903~ @99903
+    COPY ~gavin_bg2/2da/b!gavep3.2da~ ~override~ 
+        REPLACE ~99903~ @99903
 
-COPY ~gavin_bg2/2da/b!gavep4.2da~ ~override~ 
-    REPLACE ~99904~ @99904
+    COPY ~gavin_bg2/2da/b!gavep4.2da~ ~override~ 
+        REPLACE ~99904~ @99904
 
-COPY ~gavin_bg2/2da/b!gavep5.2da~ ~override~ 
-    REPLACE ~99905~ @99905
+    COPY ~gavin_bg2/2da/b!gavep5.2da~ ~override~ 
+        REPLACE ~99905~ @99905
 
-COPY ~gavin_bg2/2da/b!gavep6.2da~ ~override~ 
-    REPLACE ~99906~ @99906
+    COPY ~gavin_bg2/2da/b!gavep6.2da~ ~override~ 
+        REPLACE ~99906~ @99906
 
-COPY ~gavin_bg2/2da/b!gavep7.2da~ ~override~ 
-    REPLACE ~99907~ @99907
+    COPY ~gavin_bg2/2da/b!gavep7.2da~ ~override~ 
+        REPLACE ~99907~ @99907
 
-COPY ~gavin_bg2/2da/b!gavep8.2da~ ~override~ 
-    REPLACE ~99908~ @99908
+    COPY ~gavin_bg2/2da/b!gavep8.2da~ ~override~ 
+        REPLACE ~99908~ @99908
 
-COPY ~gavin_bg2/2da/b!gavep9.2da~ ~override~ 
-    REPLACE ~99909~ @99909
+    COPY ~gavin_bg2/2da/b!gavep9.2da~ ~override~ 
+        REPLACE ~99909~ @99909
 
-COPY ~gavin_bg2/2da/b!gavepa.2da~ ~override~ 
-    REPLACE ~99910~ @99910
+    COPY ~gavin_bg2/2da/b!gavepa.2da~ ~override~ 
+        REPLACE ~99910~ @99910
 
-COPY ~gavin_bg2/2da/b!gavepb.2da~ ~override~ 
-    REPLACE ~99911~ @99911
+    COPY ~gavin_bg2/2da/b!gavepb.2da~ ~override~ 
+        REPLACE ~99911~ @99911
 
-COPY ~gavin_bg2/2da/b!gavepc.2da~ ~override~ 
-    REPLACE ~99912~ @99912
+    COPY ~gavin_bg2/2da/b!gavepc.2da~ ~override~ 
+        REPLACE ~99912~ @99912
 
-COPY ~gavin_bg2/2da/b!gavepd.2da~ ~override~ 
-    REPLACE ~99913~ @99913
+    COPY ~gavin_bg2/2da/b!gavepd.2da~ ~override~ 
+        REPLACE ~99913~ @99913
 
     COPY_EXISTING ~ar5501.are~ ~override~    //Amkethran Inn
       PATCH_IF SOURCE_SIZE > 0x28f BEGIN
