@@ -2161,13 +2161,13 @@ SAY @451
 + ~!Global("B!GavBhaal","GLOBAL",1)~ + @452 + t3.3x2 
 + ~!GlobalGT("B!GavinEngaged","GLOBAL",0) 
       OR(2) Global("B!GavRA","GLOBAL",1) 
-          Global("B!GavRA","GLOBAL",4)~ + @453 DO ~SetGlobal("B!GavBhaal","GLOBAL",1)~ + t3.3x3 
+          Global("B!GavRA","GLOBAL",4)~ + @453 + t3.3x3 
 ++ @454 DO ~SetGlobal("B!GavBhaal","GLOBAL",1)~ + t3.3x4 
-+ ~Global("B!GavRA","GLOBAL",2)~ + @455 DO ~SetGlobal("B!GavBhaal","GLOBAL",1)~ + t3.3x7 
++ ~Global("B!GavRA","GLOBAL",2)~ + @455 + t3.3x7 
 + ~!GlobalGT("B!GavinEngaged","GLOBAL",0) 
       OR(2) Global("B!GavRA","GLOBAL",1) 
-          Global("B!GavRA","GLOBAL",4)~ + @456 DO ~SetGlobal("B!GavBhaal","GLOBAL",1)~ + t3.3x5 
-++ @457 DO ~SetGlobal("B!GavBhaal","GLOBAL",1)~ + t3.3x6 
+          Global("B!GavRA","GLOBAL",4)~ + @456 + t3.3x5 
+++ @457 + t3.3x6 
 END 
 
 IF ~~ t3.3x2 
