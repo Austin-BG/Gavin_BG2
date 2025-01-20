@@ -4317,16 +4317,16 @@ END
 + ~!Global("B!GavBhaal","GLOBAL",1)~ + @1110 EXTERN ~B!GavJ~ t8.2 
 + ~Global("B!GavBhaal","GLOBAL",1) 
       Alignment(Player1,MASK_EVIL) 
-      GlobalGT("B!GavChange","GLOBAL",4)~ + @1111 EXTERN ~B!GavJ~ t8.5 
+      GlobalGT("B!GavChange","GLOBAL",1)~ + @1111 EXTERN ~B!GavJ~ t8.5 
 + ~Global("B!GavBhaal","GLOBAL",1) 
       Alignment(Player1,MASK_EVIL) 
-      !GlobalGT("B!GavChange","GLOBAL",4)~ + @1111 EXTERN ~B!GavJ~ t8.6 
+      !GlobalGT("B!GavChange","GLOBAL",1)~ + @1111 EXTERN ~B!GavJ~ t8.6 
 + ~!Global("B!GavBhaal","GLOBAL",1) 
       Alignment(Player1,MASK_EVIL) 
-      GlobalGT("B!GavChange","GLOBAL",4)~ + @1111 EXTERN ~B!GavJ~ t8.7 
+      GlobalGT("B!GavChange","GLOBAL",1)~ + @1111 EXTERN ~B!GavJ~ t8.7 
 + ~!Global("B!GavBhaal","GLOBAL",1) 
       Alignment(Player1,MASK_EVIL) 
-      !GlobalGT("B!GavChange","GLOBAL",4)~ + @1111 EXTERN ~B!GavJ~ t8.8 
+      !GlobalGT("B!GavChange","GLOBAL",1)~ + @1111 EXTERN ~B!GavJ~ t8.8 
 + ~Global("B!GavBhaal","GLOBAL",1) 
       !Alignment(Player1,MASK_EVIL)~ + @1111 EXTERN ~B!GavJ~ t8.9 
 + ~!Global("B!GavBhaal","GLOBAL",1) 
@@ -4456,8 +4456,8 @@ IF ~~ t8.22
 SAY @1139 
 ++ @1140 DO ~SetGlobal("B!GavBhaal","GLOBAL",1)~ + t8.22a 
 ++ @1141 DO ~SetGlobal("B!GavBhaal","GLOBAL",1)~ + t8.22a 
-+ ~GlobalGT("GaalJob","GLOBAL",0)~ + @1142 + t8.22b 
-+ ~!GlobalGT("GaalJob","GLOBAL",0)~ + @1143 + t8.22c 
++ ~!Global("B!gav_met_gaal","GLOBAL",0)~ + @1142 + t8.22b 
++ ~Global("B!gav_met_gaal","GLOBAL",0)~ + @1143 + t8.22c 
 END 
 
 IF ~~ t8.22a 
@@ -8674,7 +8674,7 @@ SAY @2396
 ++ @2397 + t16.9 
 ++ @2398 + t16.10 
 ++ @2399 + t16.11 
-+ ~!Global("GaalJob","GLOBAL",0)~ + @2400 + t16.12 
++ ~Dead("UnseeingEye")~ + @2400 + t16.12 
 ++ @2401 + t16.13 
 END 
 
@@ -9337,7 +9337,7 @@ END
 IF ~~ be1.10
 SAY @2643
 ++ @2644 + be1.28
-++ @2645 DO ~IncrementGlobal("B!GavChange","GLOBAL",1)~ + be1.29
+++ @2645 + be1.29
 ++ @2646 + be1.30
 + ~Gender(Player1,FEMALE)~ + @2647 + be1.13
 ++ @2648 + be1.33
@@ -9512,7 +9512,7 @@ IF ~~ be1.35
 SAY @2705
 ++ @2706 + be1.36
 ++ @2707 DO ~IncrementGlobal("B!GavChange","GLOBAL",1)~ + be1.38
-++ @2708 DO ~IncrementGlobal("B!GavChange","GLOBAL",1)~ + be1.37
+++ @2708 + be1.37
 ++ @2709 + be1.32
 END
 
@@ -9528,7 +9528,7 @@ END
 
 IF ~~ be1.38
 SAY @2712
-IF ~~ THEN + be1.33
+IF ~~ THEN EXIT
 END 
 END 
 

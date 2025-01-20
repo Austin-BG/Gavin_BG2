@@ -1,0 +1,8 @@
+IF
+  NumTimesTalkedToGT(0)
+  Global("B!gav_met_gaal","GLOBAL",0)
+  See("b!gavin2")
+THEN
+  RESPONSE #100
+    SetGlobal("B!gav_met_gaal","GLOBAL",1)
+END

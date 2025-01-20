@@ -887,6 +887,7 @@ EXTEND_TOP    ~mazzy.bcs~    ~gavin_bg2/script/b!mazzy.baf~          // Banter w
 EXTEND_TOP    ~minsc.bcs~    ~gavin_bg2/script/b!minsc.baf~          // Banter with Minsc 
 EXTEND_BOTTOM ~bodhiamb.bcs~ ~gavin_bg2/script/b!bodhia.baf~         // Gets Bodhi out of the Graveyard and deactivates the upper transition area to the crypt 
 EXTEND_BOTTOM ~cleanse.bcs~  ~gavin_bg2/script/b!cleanse.baf~        // Gavin's body and Bodhi's heart placed on ruined Shadow Temple altar 
+EXTEND_BOTTOM ~gaal.bcs~     ~gavin_bg2/script/gaal.baf~             // gavin has met gaal
 
 
 EXTEND_BOTTOM ~VLUVINFO.bcs~ ~gavin_bg2/script/b!vluvinfo.baf~		//Statue gives info about ressurrection after vampire abduction
