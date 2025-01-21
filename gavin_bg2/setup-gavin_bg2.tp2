@@ -181,7 +181,7 @@ BEGIN @184 DESIGNATED 4
                      (MOD_IS_INSTALLED ~gavin_bg2/setup-gavin_bg2.tp2~ ~14~)) @999
   LABEL ~b!gavin_portrait_alt_1~
   
-LAF cd_portrait_npc STR_VAR source = ~amgav~ destination = ~bgavin~ source_path = ~gavin_bg2/portraits~ END
+LAF cd_portrait_npc STR_VAR source = ~amgav~ destination = ~b!gavin~ source_path = ~gavin_bg2/portraits~ END
 
 BEGIN @185 DESIGNATED 5
   SUBCOMPONENT @183
@@ -193,7 +193,7 @@ BEGIN @185 DESIGNATED 5
                      (MOD_IS_INSTALLED ~gavin_bg2/setup-gavin_bg2.tp2~ ~14~)) @999
   LABEL ~b!gavin_portrait_alt_2~
   
-LAF cd_portrait_npc STR_VAR source = ~b!gavin4~ destination = ~bgavin~ source_path = ~gavin_bg2/portraits~ END
+LAF cd_portrait_npc STR_VAR source = ~b!gavin4~ destination = ~b!gavin~ source_path = ~gavin_bg2/portraits~ END
 
 BEGIN @186 DESIGNATED 6
   SUBCOMPONENT @183
@@ -205,7 +205,7 @@ BEGIN @186 DESIGNATED 6
                      (MOD_IS_INSTALLED ~gavin_bg2/setup-gavin_bg2.tp2~ ~14~)) @999
   LABEL ~b!gavin_portrait_alt_3~
   
-LAF cd_portrait_npc STR_VAR source = ~b!gavin5~ destination = ~bgavin~ source_path = ~gavin_bg2/portraits~ END
+LAF cd_portrait_npc STR_VAR source = ~b!gavin5~ destination = ~b!gavin~ source_path = ~gavin_bg2/portraits~ END
 
 BEGIN @187 DESIGNATED 7
   SUBCOMPONENT @183
@@ -217,7 +217,7 @@ BEGIN @187 DESIGNATED 7
                      (MOD_IS_INSTALLED ~gavin_bg2/setup-gavin_bg2.tp2~ ~14~)) @999
   LABEL ~b!gavin_portrait_alt_4~
   
-LAF cd_portrait_npc STR_VAR source = ~b!gavin1~ destination = ~bgavin~ source_path = ~gavin_bg2/portraits~ END
+LAF cd_portrait_npc STR_VAR source = ~b!gavin1~ destination = ~b!gavin~ source_path = ~gavin_bg2/portraits~ END
 
 BEGIN @188 DESIGNATED 8
   SUBCOMPONENT @183
@@ -229,7 +229,7 @@ BEGIN @188 DESIGNATED 8
                      (MOD_IS_INSTALLED ~gavin_bg2/setup-gavin_bg2.tp2~ ~14~)) @999
   LABEL ~b!gavin_portrait_alt_5~
   
-LAF cd_portrait_npc STR_VAR source = ~b!gavin2~ destination = ~bgavin~ source_path = ~gavin_bg2/portraits~ END
+LAF cd_portrait_npc STR_VAR source = ~b!gavin2~ destination = ~b!gavin~ source_path = ~gavin_bg2/portraits~ END
 
 BEGIN @217 DESIGNATED 9
   SUBCOMPONENT @183
@@ -241,4 +241,4 @@ BEGIN @217 DESIGNATED 9
                      (MOD_IS_INSTALLED ~gavin_bg2/setup-gavin_bg2.tp2~ ~14~)) @999
   LABEL ~b!gavin_portrait_alt_6~ 
   
-LAF cd_portrait_npc STR_VAR source = ~b_gav1~ destination = ~bgavin~ source_path = ~gavin_bg2/portraits~ END
+LAF cd_portrait_npc STR_VAR source = ~b_gav1~ destination = ~b!gavin~ source_path = ~gavin_bg2/portraits~ END

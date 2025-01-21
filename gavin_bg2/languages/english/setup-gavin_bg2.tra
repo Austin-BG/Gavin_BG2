@@ -7,7 +7,7 @@
 @0    = ~BGT install detected.~
 @1    = ~BG2 install detected.~
 @2    = ~Please install on either BG2, BG2EE, BGT, or EET.~
-
+@3    = ~Moved into main component~
 /* @4 - @65 used in game-gavin.tra */
 
 /* @111 - @117 used in game-gavin.tra */
