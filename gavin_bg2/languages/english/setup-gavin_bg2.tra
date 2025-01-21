@@ -6,7 +6,7 @@
 
 @0    = ~BGT install detected.~
 @1    = ~BG2 install detected.~
-@2    = ~Please install on either BG2 or BGT.~
+@2    = ~Please install on either BG2, BG2EE, BGT, or EET.~
 
 /* @4 - @65 used in game-gavin.tra */
 

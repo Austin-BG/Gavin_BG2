@@ -99,6 +99,7 @@ LANGUAGE ~Russian (by Kirian & Arcanecoast Team)~ ~russian~ ~gavin_bg2/languages
 
 BEGIN @906 DESIGNATED 0 
 SUBCOMPONENT @127
+REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ @2
 LABEL ~b!gavin_bg2_3600~
 
 OUTER_SET GAV_TIME = 3600 
@@ -106,6 +107,7 @@ INCLUDE ~gavin_bg2/lib/gavin_main.tpa~
 
 BEGIN @907 DESIGNATED 10 
 SUBCOMPONENT @127
+REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ @2
 LABEL ~b!gavin_bg2_2700~
 
 OUTER_SET GAV_TIME = 2700 
@@ -113,6 +115,7 @@ INCLUDE ~gavin_bg2/lib/gavin_main.tpa~
 
 BEGIN @908 DESIGNATED 11 
 SUBCOMPONENT @127
+REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ @2
 LABEL ~b!gavin_bg2_1800~
 
 OUTER_SET GAV_TIME = 1800 
@@ -120,6 +123,7 @@ INCLUDE ~gavin_bg2/lib/gavin_main.tpa~
 
 BEGIN @909 DESIGNATED 12 
 SUBCOMPONENT @127
+REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ @2
 LABEL ~b!gavin_bg2_900~
 
 OUTER_SET GAV_TIME = 900 
@@ -127,6 +131,7 @@ INCLUDE ~gavin_bg2/lib/gavin_main.tpa~
 
 BEGIN @910 DESIGNATED 13 
 SUBCOMPONENT @127
+REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ @2
 LABEL ~b!gavin_bg2_5400~
 
 OUTER_SET GAV_TIME = 5400 
@@ -134,6 +139,7 @@ INCLUDE ~gavin_bg2/lib/gavin_main.tpa~
 
 BEGIN @911 DESIGNATED 14 
 SUBCOMPONENT @127
+REQUIRE_PREDICATE GAME_IS ~bg2 tob bgt bg2ee eet~ @2
 LABEL ~b!gavin_bg2_7200~
 
 OUTER_SET GAV_TIME = 7200 
@@ -150,20 +156,11 @@ BEGIN @192 DESIGNATED 1
   LABEL ~b!gavin_bg2_heal~
   EXTEND_TOP ~b!gavs.bcs~ ~gavin_bg2/script/b!heal.baf~ 
 
-BEGIN @194 DESIGNATED 2 
-  FORCED_SUBCOMPONENT @191  
-  REQUIRE_PREDICATE ((MOD_IS_INSTALLED ~gavin_bg2/setup-gavin_bg2.tp2~ ~0~) OR 
-                     (MOD_IS_INSTALLED ~gavin_bg2/setup-gavin_bg2.tp2~ ~10~) OR 
-                     (MOD_IS_INSTALLED ~gavin_bg2/setup-gavin_bg2.tp2~ ~11~) OR 
-                     (MOD_IS_INSTALLED ~gavin_bg2/setup-gavin_bg2.tp2~ ~12~) OR 
-                     (MOD_IS_INSTALLED ~gavin_bg2/setup-gavin_bg2.tp2~ ~13~) OR 
-                     (MOD_IS_INSTALLED ~gavin_bg2/setup-gavin_bg2.tp2~ ~14~)) @999
-  LABEL ~b!gavin_bg2_monoromance~
+// moved into main script
+BEGIN @194 DESIGNATED 2 DEPRECATED @3
+
   
-  EXTEND_TOP ~b!gavs.bcs~ ~gavin_bg2/script/b!rom_kill.baf~ 
-  
-BEGIN @195 DESIGNATED 3 
-  FORCED_SUBCOMPONENT @191  
+BEGIN @191 DESIGNATED 3 
   REQUIRE_PREDICATE ((MOD_IS_INSTALLED ~gavin_bg2/setup-gavin_bg2.tp2~ ~0~) OR 
                      (MOD_IS_INSTALLED ~gavin_bg2/setup-gavin_bg2.tp2~ ~10~) OR 
                      (MOD_IS_INSTALLED ~gavin_bg2/setup-gavin_bg2.tp2~ ~11~) OR 
