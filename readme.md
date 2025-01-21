@@ -6,11 +6,11 @@
 
 ![The G3 Logo](https://raw.githubusercontent.com/Gibberlings3/.github/master/profile/g3_neutral.png)
 
-# Gavin NPC for BG2, BGT, BG2EE, or EET
+# Gavin NPC Mod for BG2EE, EET, BG2, or BGT
 
 ## Overview
 
-This mod adds the NPC Gavin Mor to your BG2 game. Gavin is a Dawnbringer of Lathander.
+This mod adds Gavin, a neutral good Dawnbringer of Lathander, to Baldur's Gate II (original or Enhanced Edition) as well as the conversion projects EET or BGT.
 
 If you met Gavin in Baldur's Gate, you may pick up where you left off or you may decide that you met him for the first time in Athkatla. The choice is yours.
 
@@ -20,7 +20,7 @@ Once in your party, Gavin will banter with all BioWare NPCs. He has an extensive
 ## More Information
 
 :page_facing_up: [Project Page](https://www.gibberlings3.net/mods/npcs/gavin-bg2/)  
-:page_facing_up: [Readme](https://gibberlings3.github.io/Documentation/readmes/readme-Gavin_BG22.html)  
+:page_facing_up: [Readme](https://gibberlings3.github.io/Documentation/readmes/readme-gavin_bg2.html)  
 :page_facing_up: [Forum](https://www.gibberlings3.net/forum/128-gavin/) 
 
 ## 
